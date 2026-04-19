@@ -1,0 +1,22 @@
+tags:
+  cathedral:
+    description: Final-system architecture of the Cathedral
+  coding-foundry:
+    description: Bounded Cathedral-compatible coding lane
+  training:
+    description: Role-specific model training and hardware policy
+  harness:
+    description: Rust control plane and serving mediation
+  structural-ir:
+    description: Canonical structural IR boundaries and rules
+  deterministic-truth:
+    description: Exact fact surfaces that should stay deterministic
+  parameter-lineage:
+    description: Checkpoint and runtime-artifact ancestry metadata
+  reconciliation:
+    description: Accepted or rejected outside-chat imports
+  wiki:
+    description: Human-readable wiki surface files
+  verification:
+    description: Truth-check and non-drift validation files
+

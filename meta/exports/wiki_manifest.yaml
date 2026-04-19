@@ -1,0 +1,14 @@
+wiki:
+  source_dir: docs/wiki
+  pages:
+    - Home.md
+    - _Sidebar.md
+    - Architecture.md
+    - Foundry.md
+    - Training.md
+    - Harness.md
+    - Reconciliations.md
+  canonical_backlinks:
+    - RUNNING_SCHEMA.md
+    - docs/INDEX.md
+

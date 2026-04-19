@@ -1,0 +1,213 @@
+schema_status: bounded
+project_family: blackflag-cathedral
+authority_order:
+  - direct_user_truth
+  - frozen_thread_decisions
+  - reconciled_outside_chat
+  - provisional_notes
+
+systems:
+  cathedral:
+    status: frozen
+    kind: final_system
+    principles:
+      - distributed_intelligence
+      - memory_species
+      - layered_graphs
+      - model_society
+      - deterministic_truth
+      - staged_query_path
+      - multi_speed_learning
+  coding_foundry:
+    status: frozen
+    kind: cathedral_compatible_subsystem
+    role: coding_lane
+    not_final_system: true
+
+memory_species:
+  status: frozen
+  values:
+    - symbol
+    - semantic
+    - relational
+    - deterministic
+    - episodic
+    - parameter
+    - working
+
+graph_hierarchy:
+  status: frozen
+  values:
+    - token
+    - span
+    - entity
+    - concept
+    - epistemic
+    - parameter
+
+model_species:
+  status: frozen
+  values:
+    - lane_scouts
+    - lane_judges
+    - packet_builders
+    - route_controllers
+    - synthesis_models
+    - critic_models
+    - consolidation_models
+
+harness:
+  status: frozen
+  control_plane: rust
+  serving_backend: vllm
+  runtime_planes:
+    - hot
+    - warm
+    - cold
+  transport: nats_jetstream
+  durable_store: postgres
+  services:
+    - gateway
+    - scheduler
+    - broker
+    - sandbox_runner
+    - artifact_store
+    - telemetry
+  broker_rule:
+    status: frozen
+    large_blobs_forbidden: true
+    use_artifact_refs: true
+
+structural_ir:
+  status: frozen
+  canonical_source: chatgpt_5_4_reconciled
+  must_include:
+    - stable_identity
+    - structural_roles
+    - containment_and_composition
+    - ports_interfaces_topology
+    - explicit_boundaries
+    - structural_contracts
+    - instantiation_and_reuse
+    - minimal_projection_metadata
+    - source_mapping_and_provenance
+    - structural_validation_markers
+    - extension_points
+  must_exclude:
+    - executable_logic
+    - target_language_idioms
+    - ui_only_drawing_metadata
+    - runtime_state
+    - optimization_policy
+    - environment_specific_deployment_facts
+    - behavior_disguised_as_structure
+
+packets:
+  status: frozen
+  canonical_source: chatgpt_5_4_reconciled
+  families:
+    - RepoPacket
+    - TaskPacket
+    - FailurePacket
+    - PatchPacket
+    - ValidationPacket
+    - MergePacket
+  invariants:
+    - explicit_repo_anchoring
+    - explicit_task_scope
+    - explicit_base_revision
+    - patch_lineage
+    - validation_basis_revision
+    - merge_disposition
+    - explicit_supersession
+    - artifact_refs_not_inline_payloads
+
+deterministic_truth:
+  status: bounded
+  current_domains:
+    - repositories
+    - commits
+    - files
+    - symbols
+    - jobs
+    - job_edges
+    - patches
+    - validation_runs
+    - tests
+    - dependencies
+    - role_runs
+    - checkpoint_registry
+    - runtime_variants
+    - route_outcomes
+
+working_memory:
+  status: bounded
+  current_fields:
+    - objective
+    - active_task_ids
+    - active_packet_ids
+    - active_repo_slice
+    - open_ambiguities
+    - pending_validators
+    - current_route_plan
+    - current_patch_stack
+    - escalation_state
+
+parameter_lineage:
+  status: frozen
+  canonical_source: chatgpt_5_4_reconciled
+  required_fields:
+    - parameter_artifact_id
+    - lineage_record_id
+    - artifact_class
+    - model_family_ref
+    - role_ref
+    - creation_event_ref
+    - parent_artifact_refs
+    - derivation_kind
+    - parameter_state_fingerprint
+    - architecture_compatibility_ref
+    - tensor_manifest_ref
+    - storage_artifact_ref
+    - validity_status
+    - supersedes_artifact_refs
+    - provenance_chain_ref
+
+training:
+  status: frozen
+  custom_per_role: true
+  roles:
+    - router_dolphin_qwen_0_5b
+    - coding_worker_3b_x6
+    - manager_32b
+    - architect_72b
+  hardware_policy:
+    status: frozen
+    canonical_source: chatgpt_5_4_reconciled
+    principles:
+      - cheapest_acceptable_hardware
+      - no_quality_downgrade_for_cost
+      - independent_jobs_may_fan_out
+      - single_job_stays_local_or_tightly_coupled
+    escalation_triggers:
+      - memory_fit_failure
+      - quality_preservation_failure
+      - cost_crossover
+      - interconnect_bottleneck
+      - reliability_failure
+
+outside_chat_policy:
+  status: frozen
+  primary: chatgpt_5_4
+  secondary: gemini
+  avoid_for_core_decisions:
+    - grok
+
+open_items:
+  status: bounded
+  values:
+    - deterministic_truth_schema_detail
+    - working_memory_schema_detail
+    - promotion_and_consolidation_hook_schema
+    - structural_ir_to_packet_boundary_mapping
+    - visual_harness_to_ir_mapping

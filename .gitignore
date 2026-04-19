@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+*.swo
+.DS_Store
+*.save
+telegram_log.jsonl
+dashboard.py
+telegram_terminal.py
