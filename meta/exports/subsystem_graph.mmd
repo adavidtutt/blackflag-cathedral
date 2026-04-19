@@ -1,6 +1,12 @@
 graph TD
   cathedral -->|contains| cathedral__deterministic_truth
   cathedral -->|contains| cathedral__fractal_cognitive_substrate
+  cathedral__fractal_cognitive_substrate -->|depends_on| cathedral__memory
+  cathedral__fractal_cognitive_substrate -->|depends_on| cathedral__graphs
+  cathedral__fractal_cognitive_substrate -->|depends_on| cathedral__models
+  cathedral__fractal_cognitive_substrate -->|depends_on| cathedral__query_path
+  cathedral__fractal_cognitive_substrate -->|depends_on| cathedral__learning
+  cathedral__fractal_cognitive_substrate -->|depends_on| cathedral__deterministic_truth
   cathedral__fractal_cognitive_substrate -->|contains| cathedral__fractal_cognitive_substrate__compiler_learning
   cathedral__fractal_cognitive_substrate__compiler_learning -->|depends_on| cathedral__fractal_cognitive_substrate__runtime_routing
   cathedral__fractal_cognitive_substrate__compiler_learning -->|depends_on| cathedral__fractal_cognitive_substrate__model_interface

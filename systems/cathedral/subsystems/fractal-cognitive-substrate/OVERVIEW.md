@@ -32,7 +32,7 @@ The Cathedral needs a canonical structure for the map-first substrate that binds
 - Kind: `child-subsystem`
 - Status: `bounded`
 - Parent: `cathedral`
-- Depends on: `none`
+- Depends on: `cathedral/memory, cathedral/graphs, cathedral/models, cathedral/query-path, cathedral/learning, cathedral/deterministic-truth`
 - Allowed dependencies: `cathedral/memory, cathedral/graphs, cathedral/models, cathedral/query-path, cathedral/learning, cathedral/deterministic-truth, cathedral/fractal-cognitive-substrate/ontology, cathedral/fractal-cognitive-substrate/memory-topology, cathedral/fractal-cognitive-substrate/graph-topology, cathedral/fractal-cognitive-substrate/runtime-routing, cathedral/fractal-cognitive-substrate/compiler-learning, cathedral/fractal-cognitive-substrate/model-interface, cathedral/fractal-cognitive-substrate/mapflow`
 - Child subsystems: `cathedral/fractal-cognitive-substrate/ontology, cathedral/fractal-cognitive-substrate/memory-topology, cathedral/fractal-cognitive-substrate/graph-topology, cathedral/fractal-cognitive-substrate/runtime-routing, cathedral/fractal-cognitive-substrate/compiler-learning, cathedral/fractal-cognitive-substrate/model-interface, cathedral/fractal-cognitive-substrate/mapflow`
 
@@ -41,6 +41,8 @@ The Cathedral needs a canonical structure for the map-first substrate that binds
 - Canonical schema: [FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md](../../../../docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md)
 - Local readme: [README.md](README.md)
 - Local schema surface: [SCHEMA.md](SCHEMA.md)
+- Contracts surface: [contracts](contracts/README.md)
+- Tests surface: [tests](tests/README.md)
 - Validator: `python3 scripts/validate_subsystems.py`
 
 ## When

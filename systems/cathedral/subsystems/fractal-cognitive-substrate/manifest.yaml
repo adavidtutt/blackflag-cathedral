@@ -4,7 +4,16 @@
   "kind": "child-subsystem",
   "status": "bounded",
   "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
-  "depends_on": [],
+  "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/README.md",
+  "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/SCHEMA.md",
+  "depends_on": [
+    "cathedral/memory",
+    "cathedral/graphs",
+    "cathedral/models",
+    "cathedral/query-path",
+    "cathedral/learning",
+    "cathedral/deterministic-truth"
+  ],
   "allowed_dependencies": [
     "cathedral/memory",
     "cathedral/graphs",

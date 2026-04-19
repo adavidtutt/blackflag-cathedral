@@ -88,7 +88,14 @@
         "cathedral/fractal-cognitive-substrate/model-interface",
         "cathedral/fractal-cognitive-substrate/mapflow"
       ],
-      "depends_on": [],
+      "depends_on": [
+        "cathedral/memory",
+        "cathedral/graphs",
+        "cathedral/models",
+        "cathedral/query-path",
+        "cathedral/learning",
+        "cathedral/deterministic-truth"
+      ],
       "id": "cathedral/fractal-cognitive-substrate",
       "kind": "child-subsystem",
       "manifest": "systems/cathedral/subsystems/fractal-cognitive-substrate/manifest.yaml",

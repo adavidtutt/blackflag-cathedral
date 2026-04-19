@@ -12,6 +12,36 @@
     },
     {
       "from": "cathedral/fractal-cognitive-substrate",
+      "kind": "depends_on",
+      "to": "cathedral/memory"
+    },
+    {
+      "from": "cathedral/fractal-cognitive-substrate",
+      "kind": "depends_on",
+      "to": "cathedral/graphs"
+    },
+    {
+      "from": "cathedral/fractal-cognitive-substrate",
+      "kind": "depends_on",
+      "to": "cathedral/models"
+    },
+    {
+      "from": "cathedral/fractal-cognitive-substrate",
+      "kind": "depends_on",
+      "to": "cathedral/query-path"
+    },
+    {
+      "from": "cathedral/fractal-cognitive-substrate",
+      "kind": "depends_on",
+      "to": "cathedral/learning"
+    },
+    {
+      "from": "cathedral/fractal-cognitive-substrate",
+      "kind": "depends_on",
+      "to": "cathedral/deterministic-truth"
+    },
+    {
+      "from": "cathedral/fractal-cognitive-substrate",
       "kind": "contains",
       "to": "cathedral/fractal-cognitive-substrate/compiler-learning"
     },
@@ -360,7 +390,14 @@
         "cathedral/fractal-cognitive-substrate/model-interface",
         "cathedral/fractal-cognitive-substrate/mapflow"
       ],
-      "depends_on": [],
+      "depends_on": [
+        "cathedral/memory",
+        "cathedral/graphs",
+        "cathedral/models",
+        "cathedral/query-path",
+        "cathedral/learning",
+        "cathedral/deterministic-truth"
+      ],
       "kind": "child-subsystem",
       "parent": "cathedral",
       "status": "bounded"

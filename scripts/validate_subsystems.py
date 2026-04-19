@@ -85,17 +85,28 @@ def main():
         if not overview_path.exists():
             errors.append(f"{subsystem_id}: missing OVERVIEW.md")
 
-        if manifest.get("kind") == "top-level-subsystem":
+        is_top_level = manifest.get("kind") == "top-level-subsystem"
+        is_composite = bool(manifest.get("registry")) or bool(manifest.get("owned_subsystems"))
+
+        if is_top_level:
             for required_key in ["readme", "schema_surface", "registry", "owned_subsystems"]:
                 if required_key not in manifest:
                     errors.append(f"{subsystem_id}: missing required top-level key {required_key}")
+
+        if is_composite:
+            for required_key in ["readme", "schema_surface", "registry", "owned_subsystems"]:
+                if required_key not in manifest:
+                    errors.append(f"{subsystem_id}: missing required composite key {required_key}")
 
             for rel_path in [manifest.get("readme"), manifest.get("schema_surface"), manifest.get("registry")]:
                 if rel_path and not (ROOT / rel_path).exists():
                     errors.append(f"{subsystem_id}: referenced path missing {rel_path}")
 
+            subsystem_registry_readme = subsystem_dir / "subsystems" / "README.md"
             contracts_readme = subsystem_dir / "contracts" / "README.md"
             tests_readme = subsystem_dir / "tests" / "README.md"
+            if not subsystem_registry_readme.exists():
+                errors.append(f"{subsystem_id}: missing subsystems/README.md")
             if not contracts_readme.exists():
                 errors.append(f"{subsystem_id}: missing contracts/README.md")
             if not tests_readme.exists():
