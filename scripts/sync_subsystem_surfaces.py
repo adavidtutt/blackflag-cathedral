@@ -90,6 +90,16 @@ def main():
         lines.append(f"- Allowed dependencies: `{', '.join(manifest.get('allowed_dependencies', [])) or 'none'}`")
         lines.append(f"- Child subsystems: `{', '.join(children) or 'none'}`")
         lines.append("")
+        contract_node = manifest.get("contract_node")
+        if contract_node:
+            lines.append("## Contract Node")
+            lines.append("")
+            lines.append(f"- Class: `{contract_node.get('node_class', 'unknown')}`")
+            lines.append(f"- Owns: `{', '.join(contract_node.get('owns', [])) or 'none'}`")
+            lines.append(f"- Requires: `{', '.join(contract_node.get('requires', [])) or 'none'}`")
+            lines.append(f"- Emits to: `{', '.join(contract_node.get('emits_to', [])) or 'none'}`")
+            lines.append(f"- Forbids: `{', '.join(contract_node.get('forbids', [])) or 'none'}`")
+            lines.append("")
         lines.append("## How")
         lines.append("")
         lines.append(f"- Canonical schema: [{schema_path.name}]({rel(overview_path, schema_path)})")
@@ -127,6 +137,7 @@ def main():
             "depends_on": manifest.get("depends_on", []),
             "allowed_dependencies": manifest.get("allowed_dependencies", []),
             "child_subsystems": children,
+            "contract_node": contract_node,
             "manifest": manifest_path.relative_to(ROOT).as_posix(),
             "canonical_schema": manifest["canonical_schema"],
             "readme": readme_path.relative_to(ROOT).as_posix(),

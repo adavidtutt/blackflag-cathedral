@@ -4,6 +4,8 @@
   "kind": "child-subsystem",
   "status": "bounded",
   "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+  "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/model-interface/README.md",
+  "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/model-interface/SCHEMA.md",
   "depends_on": [
     "cathedral/fractal-cognitive-substrate/ontology"
   ],
@@ -11,6 +13,30 @@
     "cathedral/models",
     "cathedral/learning",
     "cathedral/fractal-cognitive-substrate/ontology",
-    "cathedral/fractal-cognitive-substrate/runtime-routing"
-  ]
+    "cathedral/fractal-cognitive-substrate/runtime-routing",
+    "cathedral/fractal-cognitive-substrate/compiler-learning",
+    "cathedral/fractal-cognitive-substrate/mapflow"
+  ],
+  "contract_node": {
+    "node_class": "model-boundary-law",
+    "owns": [
+      "deterministic/probabilistic split",
+      "translator law",
+      "parameter-artifact boundary",
+      "model-adjacent promotion boundaries"
+    ],
+    "requires": [
+      "cathedral/fractal-cognitive-substrate/ontology"
+    ],
+    "emits_to": [
+      "cathedral/fractal-cognitive-substrate/runtime-routing",
+      "cathedral/fractal-cognitive-substrate/compiler-learning",
+      "cathedral/fractal-cognitive-substrate/mapflow"
+    ],
+    "forbids": [
+      "primary fact storage",
+      "contradiction ownership",
+      "world-truth authority"
+    ]
+  }
 }

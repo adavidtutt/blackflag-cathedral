@@ -69,6 +69,11 @@ def main():
             if not schema_path.exists():
                 errors.append(f"{subsystem_id}: canonical_schema path missing {manifest['canonical_schema']}")
 
+        for rel_key in ["readme", "schema_surface"]:
+            rel_path = manifest.get(rel_key)
+            if rel_path and not (ROOT / rel_path).exists():
+                errors.append(f"{subsystem_id}: referenced path missing {rel_path}")
+
         depends_on = manifest.get("depends_on", [])
         allowed_deps = manifest.get("allowed_dependencies", [])
         for dep in depends_on:
@@ -87,6 +92,10 @@ def main():
 
         is_top_level = manifest.get("kind") == "top-level-subsystem"
         is_composite = bool(manifest.get("registry")) or bool(manifest.get("owned_subsystems"))
+        is_fcs_contract_layer = (
+            subsystem_id.startswith("cathedral/fractal-cognitive-substrate/")
+            and subsystem_id != "cathedral/fractal-cognitive-substrate"
+        )
 
         if is_top_level:
             for required_key in ["readme", "schema_surface", "registry", "owned_subsystems"]:
@@ -111,6 +120,46 @@ def main():
                 errors.append(f"{subsystem_id}: missing contracts/README.md")
             if not tests_readme.exists():
                 errors.append(f"{subsystem_id}: missing tests/README.md")
+
+        if is_fcs_contract_layer:
+            for required_key in ["readme", "schema_surface", "contract_node"]:
+                if required_key not in manifest:
+                    errors.append(f"{subsystem_id}: missing required FCS contract-layer key {required_key}")
+
+            contracts_readme = subsystem_dir / "contracts" / "README.md"
+            tests_readme = subsystem_dir / "tests" / "README.md"
+            if not contracts_readme.exists():
+                errors.append(f"{subsystem_id}: missing contracts/README.md")
+            if not tests_readme.exists():
+                errors.append(f"{subsystem_id}: missing tests/README.md")
+
+            contract_node = manifest.get("contract_node", {})
+            for required_key in ["node_class", "owns", "requires", "emits_to", "forbids"]:
+                if required_key not in contract_node:
+                    errors.append(f"{subsystem_id}: contract_node missing {required_key}")
+
+            owns = contract_node.get("owns", [])
+            requires = contract_node.get("requires", [])
+            emits_to = contract_node.get("emits_to", [])
+            forbids = contract_node.get("forbids", [])
+
+            if not isinstance(owns, list) or not owns:
+                errors.append(f"{subsystem_id}: contract_node owns must be a non-empty list")
+            if not isinstance(requires, list):
+                errors.append(f"{subsystem_id}: contract_node requires must be a list")
+            if not isinstance(emits_to, list):
+                errors.append(f"{subsystem_id}: contract_node emits_to must be a list")
+            if not isinstance(forbids, list) or not forbids:
+                errors.append(f"{subsystem_id}: contract_node forbids must be a non-empty list")
+
+            if sorted(requires) != sorted(depends_on):
+                errors.append(f"{subsystem_id}: contract_node requires must match depends_on exactly")
+
+            for dep in emits_to:
+                if dep not in manifests:
+                    errors.append(f"{subsystem_id}: contract_node emits_to target missing {dep}")
+                if allowed_deps and dep not in allowed_deps:
+                    errors.append(f"{subsystem_id}: contract_node emits_to target {dep} not present in allowed_dependencies")
 
         owned = manifest.get("owned_subsystems", [])
         registry_rel = manifest.get("registry")

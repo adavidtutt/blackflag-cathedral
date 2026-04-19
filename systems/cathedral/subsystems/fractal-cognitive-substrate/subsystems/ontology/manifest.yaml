@@ -4,10 +4,43 @@
   "kind": "child-subsystem",
   "status": "bounded",
   "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+  "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/ontology/README.md",
+  "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/ontology/SCHEMA.md",
   "depends_on": [],
   "allowed_dependencies": [
     "cathedral/memory",
     "cathedral/graphs",
-    "cathedral/deterministic-truth"
-  ]
+    "cathedral/deterministic-truth",
+    "cathedral/fractal-cognitive-substrate/memory-topology",
+    "cathedral/fractal-cognitive-substrate/graph-topology",
+    "cathedral/fractal-cognitive-substrate/runtime-routing",
+    "cathedral/fractal-cognitive-substrate/compiler-learning",
+    "cathedral/fractal-cognitive-substrate/model-interface",
+    "cathedral/fractal-cognitive-substrate/mapflow"
+  ],
+  "contract_node": {
+    "node_class": "substrate-law",
+    "owns": [
+      "artifact classes",
+      "node contract",
+      "payload classes",
+      "identity rules",
+      "lineage surfaces",
+      "universal verbs"
+    ],
+    "requires": [],
+    "emits_to": [
+      "cathedral/fractal-cognitive-substrate/memory-topology",
+      "cathedral/fractal-cognitive-substrate/graph-topology",
+      "cathedral/fractal-cognitive-substrate/runtime-routing",
+      "cathedral/fractal-cognitive-substrate/compiler-learning",
+      "cathedral/fractal-cognitive-substrate/model-interface",
+      "cathedral/fractal-cognitive-substrate/mapflow"
+    ],
+    "forbids": [
+      "duplicate node law outside ontology",
+      "mutable identity semantics in downstream layers",
+      "payload custody rules embedded in child layers without ontology updates"
+    ]
+  }
 }

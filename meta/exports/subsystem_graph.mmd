@@ -10,10 +10,13 @@ graph TD
   cathedral__fractal_cognitive_substrate -->|contains| cathedral__fractal_cognitive_substrate__compiler_learning
   cathedral__fractal_cognitive_substrate__compiler_learning -->|depends_on| cathedral__fractal_cognitive_substrate__runtime_routing
   cathedral__fractal_cognitive_substrate__compiler_learning -->|depends_on| cathedral__fractal_cognitive_substrate__model_interface
+  cathedral__fractal_cognitive_substrate__compiler_learning -->|depends_on| cathedral__fractal_cognitive_substrate__graph_topology
   cathedral__fractal_cognitive_substrate -->|contains| cathedral__fractal_cognitive_substrate__graph_topology
   cathedral__fractal_cognitive_substrate__graph_topology -->|depends_on| cathedral__fractal_cognitive_substrate__ontology
   cathedral__fractal_cognitive_substrate -->|contains| cathedral__fractal_cognitive_substrate__mapflow
   cathedral__fractal_cognitive_substrate__mapflow -->|depends_on| cathedral__fractal_cognitive_substrate__ontology
+  cathedral__fractal_cognitive_substrate__mapflow -->|depends_on| cathedral__fractal_cognitive_substrate__memory_topology
+  cathedral__fractal_cognitive_substrate__mapflow -->|depends_on| cathedral__fractal_cognitive_substrate__graph_topology
   cathedral__fractal_cognitive_substrate__mapflow -->|depends_on| cathedral__fractal_cognitive_substrate__runtime_routing
   cathedral__fractal_cognitive_substrate__mapflow -->|depends_on| cathedral__fractal_cognitive_substrate__compiler_learning
   cathedral__fractal_cognitive_substrate__mapflow -->|depends_on| cathedral__fractal_cognitive_substrate__model_interface
@@ -26,6 +29,7 @@ graph TD
   cathedral__fractal_cognitive_substrate__runtime_routing -->|depends_on| cathedral__fractal_cognitive_substrate__ontology
   cathedral__fractal_cognitive_substrate__runtime_routing -->|depends_on| cathedral__fractal_cognitive_substrate__memory_topology
   cathedral__fractal_cognitive_substrate__runtime_routing -->|depends_on| cathedral__fractal_cognitive_substrate__graph_topology
+  cathedral__fractal_cognitive_substrate__runtime_routing -->|depends_on| cathedral__fractal_cognitive_substrate__model_interface
   cathedral -->|contains| cathedral__graphs
   cathedral -->|contains| cathedral__learning
   cathedral -->|contains| cathedral__memory

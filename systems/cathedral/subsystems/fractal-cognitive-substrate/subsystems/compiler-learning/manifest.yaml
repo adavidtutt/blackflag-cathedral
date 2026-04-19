@@ -4,15 +4,45 @@
   "kind": "child-subsystem",
   "status": "bounded",
   "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+  "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/compiler-learning/README.md",
+  "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/compiler-learning/SCHEMA.md",
   "depends_on": [
     "cathedral/fractal-cognitive-substrate/runtime-routing",
-    "cathedral/fractal-cognitive-substrate/model-interface"
+    "cathedral/fractal-cognitive-substrate/model-interface",
+    "cathedral/fractal-cognitive-substrate/graph-topology"
   ],
   "allowed_dependencies": [
     "cathedral/learning",
     "cathedral/fractal-cognitive-substrate/ontology",
     "cathedral/fractal-cognitive-substrate/graph-topology",
     "cathedral/fractal-cognitive-substrate/runtime-routing",
-    "cathedral/fractal-cognitive-substrate/model-interface"
-  ]
+    "cathedral/fractal-cognitive-substrate/model-interface",
+    "cathedral/fractal-cognitive-substrate/mapflow"
+  ],
+  "contract_node": {
+    "node_class": "rewrite-learning-law",
+    "owns": [
+      "exhaust capture",
+      "route-prior rewrite",
+      "summary generation",
+      "promotion and demotion",
+      "replay-capsule generation",
+      "compression families",
+      "speculative prestaging"
+    ],
+    "requires": [
+      "cathedral/fractal-cognitive-substrate/runtime-routing",
+      "cathedral/fractal-cognitive-substrate/model-interface",
+      "cathedral/fractal-cognitive-substrate/graph-topology"
+    ],
+    "emits_to": [
+      "cathedral/fractal-cognitive-substrate/runtime-routing",
+      "cathedral/fractal-cognitive-substrate/mapflow"
+    ],
+    "forbids": [
+      "sovereign hot execution ownership",
+      "direct world-fact storage",
+      "untagged exhaust classes"
+    ]
+  }
 }

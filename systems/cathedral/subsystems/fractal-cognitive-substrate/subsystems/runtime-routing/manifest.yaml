@@ -4,10 +4,13 @@
   "kind": "child-subsystem",
   "status": "bounded",
   "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+  "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/runtime-routing/README.md",
+  "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/runtime-routing/SCHEMA.md",
   "depends_on": [
     "cathedral/fractal-cognitive-substrate/ontology",
     "cathedral/fractal-cognitive-substrate/memory-topology",
-    "cathedral/fractal-cognitive-substrate/graph-topology"
+    "cathedral/fractal-cognitive-substrate/graph-topology",
+    "cathedral/fractal-cognitive-substrate/model-interface"
   ],
   "allowed_dependencies": [
     "cathedral/query-path",
@@ -16,6 +19,33 @@
     "cathedral/fractal-cognitive-substrate/ontology",
     "cathedral/fractal-cognitive-substrate/memory-topology",
     "cathedral/fractal-cognitive-substrate/graph-topology",
-    "cathedral/fractal-cognitive-substrate/model-interface"
-  ]
+    "cathedral/fractal-cognitive-substrate/model-interface",
+    "cathedral/fractal-cognitive-substrate/compiler-learning",
+    "cathedral/fractal-cognitive-substrate/mapflow"
+  ],
+  "contract_node": {
+    "node_class": "route-execution-law",
+    "owns": [
+      "route sketch",
+      "hydration pipeline",
+      "turn arbitration",
+      "execution budgets",
+      "traversal stop rules"
+    ],
+    "requires": [
+      "cathedral/fractal-cognitive-substrate/ontology",
+      "cathedral/fractal-cognitive-substrate/memory-topology",
+      "cathedral/fractal-cognitive-substrate/graph-topology",
+      "cathedral/fractal-cognitive-substrate/model-interface"
+    ],
+    "emits_to": [
+      "cathedral/fractal-cognitive-substrate/compiler-learning",
+      "cathedral/fractal-cognitive-substrate/mapflow"
+    ],
+    "forbids": [
+      "primary fact ownership",
+      "ontology redefinition",
+      "unbounded graph traversal"
+    ]
+  }
 }

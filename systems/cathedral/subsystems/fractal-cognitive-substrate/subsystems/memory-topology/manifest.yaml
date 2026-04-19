@@ -4,11 +4,41 @@
   "kind": "child-subsystem",
   "status": "bounded",
   "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+  "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/memory-topology/README.md",
+  "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/memory-topology/SCHEMA.md",
   "depends_on": [
     "cathedral/fractal-cognitive-substrate/ontology"
   ],
   "allowed_dependencies": [
     "cathedral/memory",
-    "cathedral/fractal-cognitive-substrate/ontology"
-  ]
+    "cathedral/fractal-cognitive-substrate/ontology",
+    "cathedral/fractal-cognitive-substrate/graph-topology",
+    "cathedral/fractal-cognitive-substrate/runtime-routing",
+    "cathedral/fractal-cognitive-substrate/mapflow"
+  ],
+  "contract_node": {
+    "node_class": "memory-plane-law",
+    "owns": [
+      "cold plane",
+      "warm plane",
+      "hot plane",
+      "speculative plane",
+      "residency law",
+      "staging law",
+      "object granularity law"
+    ],
+    "requires": [
+      "cathedral/fractal-cognitive-substrate/ontology"
+    ],
+    "emits_to": [
+      "cathedral/fractal-cognitive-substrate/graph-topology",
+      "cathedral/fractal-cognitive-substrate/runtime-routing",
+      "cathedral/fractal-cognitive-substrate/mapflow"
+    ],
+    "forbids": [
+      "graph contradiction semantics",
+      "model role boundaries",
+      "payload identity rules outside ontology"
+    ]
+  }
 }

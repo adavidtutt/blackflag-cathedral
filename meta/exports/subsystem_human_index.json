@@ -17,6 +17,7 @@
         "cathedral/deterministic-truth",
         "cathedral/fractal-cognitive-substrate"
       ],
+      "contract_node": null,
       "depends_on": [],
       "id": "cathedral",
       "kind": "top-level-subsystem",
@@ -43,6 +44,7 @@
       ],
       "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "cathedral/deterministic-truth",
       "kind": "child-subsystem",
@@ -88,6 +90,7 @@
         "cathedral/fractal-cognitive-substrate/model-interface",
         "cathedral/fractal-cognitive-substrate/mapflow"
       ],
+      "contract_node": null,
       "depends_on": [
         "cathedral/memory",
         "cathedral/graphs",
@@ -120,13 +123,41 @@
         "cathedral/fractal-cognitive-substrate/ontology",
         "cathedral/fractal-cognitive-substrate/graph-topology",
         "cathedral/fractal-cognitive-substrate/runtime-routing",
-        "cathedral/fractal-cognitive-substrate/model-interface"
+        "cathedral/fractal-cognitive-substrate/model-interface",
+        "cathedral/fractal-cognitive-substrate/mapflow"
       ],
       "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": {
+        "emits_to": [
+          "cathedral/fractal-cognitive-substrate/runtime-routing",
+          "cathedral/fractal-cognitive-substrate/mapflow"
+        ],
+        "forbids": [
+          "sovereign hot execution ownership",
+          "direct world-fact storage",
+          "untagged exhaust classes"
+        ],
+        "node_class": "rewrite-learning-law",
+        "owns": [
+          "exhaust capture",
+          "route-prior rewrite",
+          "summary generation",
+          "promotion and demotion",
+          "replay-capsule generation",
+          "compression families",
+          "speculative prestaging"
+        ],
+        "requires": [
+          "cathedral/fractal-cognitive-substrate/runtime-routing",
+          "cathedral/fractal-cognitive-substrate/model-interface",
+          "cathedral/fractal-cognitive-substrate/graph-topology"
+        ]
+      },
       "depends_on": [
         "cathedral/fractal-cognitive-substrate/runtime-routing",
-        "cathedral/fractal-cognitive-substrate/model-interface"
+        "cathedral/fractal-cognitive-substrate/model-interface",
+        "cathedral/fractal-cognitive-substrate/graph-topology"
       ],
       "id": "cathedral/fractal-cognitive-substrate/compiler-learning",
       "kind": "child-subsystem",
@@ -136,7 +167,7 @@
       "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/compiler-learning",
       "rationale": "The substrate only becomes self-compiling if runtime exhaust is turned into better route priors, summaries, and durable structure.",
       "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/compiler-learning/README.md",
-      "schema_surface": null,
+      "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/compiler-learning/SCHEMA.md",
       "status": "bounded",
       "summary": "Background compilation, exhaust reuse, compression, and self-rewrite loops.",
       "touch_when": "Touch this when compiler jobs, compression families, promotion logic, or consolidation loops change."
@@ -151,10 +182,36 @@
         "cathedral/graphs",
         "cathedral/deterministic-truth",
         "cathedral/fractal-cognitive-substrate/ontology",
-        "cathedral/fractal-cognitive-substrate/memory-topology"
+        "cathedral/fractal-cognitive-substrate/memory-topology",
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/compiler-learning",
+        "cathedral/fractal-cognitive-substrate/mapflow"
       ],
       "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": {
+        "emits_to": [
+          "cathedral/fractal-cognitive-substrate/runtime-routing",
+          "cathedral/fractal-cognitive-substrate/compiler-learning",
+          "cathedral/fractal-cognitive-substrate/mapflow"
+        ],
+        "forbids": [
+          "residency policy ownership",
+          "dense-model translator law",
+          "untyped contradiction handling"
+        ],
+        "node_class": "graph-law",
+        "owns": [
+          "typed graph families",
+          "confidence lattice",
+          "contradiction semantics",
+          "refutation semantics",
+          "supersession semantics"
+        ],
+        "requires": [
+          "cathedral/fractal-cognitive-substrate/ontology"
+        ]
+      },
       "depends_on": [
         "cathedral/fractal-cognitive-substrate/ontology"
       ],
@@ -166,7 +223,7 @@
       "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/graph-topology",
       "rationale": "The map is not one graph; it is a stack of typed graph surfaces with attached trust and contradiction state.",
       "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/graph-topology/README.md",
-      "schema_surface": null,
+      "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/graph-topology/SCHEMA.md",
       "status": "bounded",
       "summary": "Typed graph stack, confidence lattice, and contradiction/refutation surfaces.",
       "touch_when": "Touch this when graph families, edge semantics, confidence vectors, or contradiction handling changes."
@@ -191,8 +248,35 @@
       ],
       "canonical_schema": "docs/schemas/MAPFLOW_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": {
+        "emits_to": [],
+        "forbids": [
+          "a second ontology",
+          "arbitrary graph wandering in the hot path",
+          "lowering meaning-heavy irregular logic into kernels"
+        ],
+        "node_class": "authoring-lowering-law",
+        "owns": [
+          "DSL grammar",
+          "MapIR and later IR surfaces",
+          "legality rules",
+          "lowering rules",
+          "execution-class declarations",
+          "page and kernel lowering interfaces"
+        ],
+        "requires": [
+          "cathedral/fractal-cognitive-substrate/ontology",
+          "cathedral/fractal-cognitive-substrate/memory-topology",
+          "cathedral/fractal-cognitive-substrate/graph-topology",
+          "cathedral/fractal-cognitive-substrate/runtime-routing",
+          "cathedral/fractal-cognitive-substrate/compiler-learning",
+          "cathedral/fractal-cognitive-substrate/model-interface"
+        ]
+      },
       "depends_on": [
         "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/memory-topology",
+        "cathedral/fractal-cognitive-substrate/graph-topology",
         "cathedral/fractal-cognitive-substrate/runtime-routing",
         "cathedral/fractal-cognitive-substrate/compiler-learning",
         "cathedral/fractal-cognitive-substrate/model-interface"
@@ -205,7 +289,7 @@
       "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/mapflow",
       "rationale": "FCS needs a first-class authoring and lowering surface that preserves substrate semantics while lowering only regular dense work into fast kernels.",
       "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/mapflow/README.md",
-      "schema_surface": null,
+      "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/mapflow/SCHEMA.md",
       "status": "bounded",
       "summary": "Language and compiler surface for expressing and lowering FCS semantics.",
       "touch_when": "Touch this when DSL constructs, IR layers, legality rules, scheduling doctrine, or backend-lowering boundaries change."
@@ -218,10 +302,38 @@
       ],
       "allowed_dependencies": [
         "cathedral/memory",
-        "cathedral/fractal-cognitive-substrate/ontology"
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/graph-topology",
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/mapflow"
       ],
       "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": {
+        "emits_to": [
+          "cathedral/fractal-cognitive-substrate/graph-topology",
+          "cathedral/fractal-cognitive-substrate/runtime-routing",
+          "cathedral/fractal-cognitive-substrate/mapflow"
+        ],
+        "forbids": [
+          "graph contradiction semantics",
+          "model role boundaries",
+          "payload identity rules outside ontology"
+        ],
+        "node_class": "memory-plane-law",
+        "owns": [
+          "cold plane",
+          "warm plane",
+          "hot plane",
+          "speculative plane",
+          "residency law",
+          "staging law",
+          "object granularity law"
+        ],
+        "requires": [
+          "cathedral/fractal-cognitive-substrate/ontology"
+        ]
+      },
       "depends_on": [
         "cathedral/fractal-cognitive-substrate/ontology"
       ],
@@ -233,7 +345,7 @@
       "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/memory-topology",
       "rationale": "The substrate only works if different memory planes have explicit roles, representations, and transfer rules.",
       "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/memory-topology/README.md",
-      "schema_surface": null,
+      "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/memory-topology/SCHEMA.md",
       "status": "bounded",
       "summary": "Cold, warm, hot, and speculative memory-plane structure for the substrate.",
       "touch_when": "Touch this when memory planes, staging rules, or object-granularity policies change."
@@ -248,10 +360,34 @@
         "cathedral/models",
         "cathedral/learning",
         "cathedral/fractal-cognitive-substrate/ontology",
-        "cathedral/fractal-cognitive-substrate/runtime-routing"
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/compiler-learning",
+        "cathedral/fractal-cognitive-substrate/mapflow"
       ],
       "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": {
+        "emits_to": [
+          "cathedral/fractal-cognitive-substrate/runtime-routing",
+          "cathedral/fractal-cognitive-substrate/compiler-learning",
+          "cathedral/fractal-cognitive-substrate/mapflow"
+        ],
+        "forbids": [
+          "primary fact storage",
+          "contradiction ownership",
+          "world-truth authority"
+        ],
+        "node_class": "model-boundary-law",
+        "owns": [
+          "deterministic/probabilistic split",
+          "translator law",
+          "parameter-artifact boundary",
+          "model-adjacent promotion boundaries"
+        ],
+        "requires": [
+          "cathedral/fractal-cognitive-substrate/ontology"
+        ]
+      },
       "depends_on": [
         "cathedral/fractal-cognitive-substrate/ontology"
       ],
@@ -263,7 +399,7 @@
       "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/model-interface",
       "rationale": "The substrate needs a formal interface for what models do, what they do not own, and how model-adjacent artifacts enter the map.",
       "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/model-interface/README.md",
-      "schema_surface": null,
+      "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/model-interface/SCHEMA.md",
       "status": "bounded",
       "summary": "Deterministic/probabilistic split, translators, and parameter-system interface to dense models.",
       "touch_when": "Touch this when translator rules, model roles, or parameter-artifact boundaries change."
@@ -277,10 +413,41 @@
       "allowed_dependencies": [
         "cathedral/memory",
         "cathedral/graphs",
-        "cathedral/deterministic-truth"
+        "cathedral/deterministic-truth",
+        "cathedral/fractal-cognitive-substrate/memory-topology",
+        "cathedral/fractal-cognitive-substrate/graph-topology",
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/compiler-learning",
+        "cathedral/fractal-cognitive-substrate/model-interface",
+        "cathedral/fractal-cognitive-substrate/mapflow"
       ],
       "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": {
+        "emits_to": [
+          "cathedral/fractal-cognitive-substrate/memory-topology",
+          "cathedral/fractal-cognitive-substrate/graph-topology",
+          "cathedral/fractal-cognitive-substrate/runtime-routing",
+          "cathedral/fractal-cognitive-substrate/compiler-learning",
+          "cathedral/fractal-cognitive-substrate/model-interface",
+          "cathedral/fractal-cognitive-substrate/mapflow"
+        ],
+        "forbids": [
+          "duplicate node law outside ontology",
+          "mutable identity semantics in downstream layers",
+          "payload custody rules embedded in child layers without ontology updates"
+        ],
+        "node_class": "substrate-law",
+        "owns": [
+          "artifact classes",
+          "node contract",
+          "payload classes",
+          "identity rules",
+          "lineage surfaces",
+          "universal verbs"
+        ],
+        "requires": []
+      },
       "depends_on": [],
       "id": "cathedral/fractal-cognitive-substrate/ontology",
       "kind": "child-subsystem",
@@ -290,7 +457,7 @@
       "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/ontology",
       "rationale": "The substrate needs one reusable shell law so all later layers compose instead of drifting into incompatible object families.",
       "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/ontology/README.md",
-      "schema_surface": null,
+      "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/ontology/SCHEMA.md",
       "status": "bounded",
       "summary": "Universal artifact, node, payload, and contract law for the substrate.",
       "touch_when": "Touch this when node fields, artifact classes, universal verbs, or identity semantics change."
@@ -308,14 +475,42 @@
         "cathedral/fractal-cognitive-substrate/ontology",
         "cathedral/fractal-cognitive-substrate/memory-topology",
         "cathedral/fractal-cognitive-substrate/graph-topology",
-        "cathedral/fractal-cognitive-substrate/model-interface"
+        "cathedral/fractal-cognitive-substrate/model-interface",
+        "cathedral/fractal-cognitive-substrate/compiler-learning",
+        "cathedral/fractal-cognitive-substrate/mapflow"
       ],
       "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": {
+        "emits_to": [
+          "cathedral/fractal-cognitive-substrate/compiler-learning",
+          "cathedral/fractal-cognitive-substrate/mapflow"
+        ],
+        "forbids": [
+          "primary fact ownership",
+          "ontology redefinition",
+          "unbounded graph traversal"
+        ],
+        "node_class": "route-execution-law",
+        "owns": [
+          "route sketch",
+          "hydration pipeline",
+          "turn arbitration",
+          "execution budgets",
+          "traversal stop rules"
+        ],
+        "requires": [
+          "cathedral/fractal-cognitive-substrate/ontology",
+          "cathedral/fractal-cognitive-substrate/memory-topology",
+          "cathedral/fractal-cognitive-substrate/graph-topology",
+          "cathedral/fractal-cognitive-substrate/model-interface"
+        ]
+      },
       "depends_on": [
         "cathedral/fractal-cognitive-substrate/ontology",
         "cathedral/fractal-cognitive-substrate/memory-topology",
-        "cathedral/fractal-cognitive-substrate/graph-topology"
+        "cathedral/fractal-cognitive-substrate/graph-topology",
+        "cathedral/fractal-cognitive-substrate/model-interface"
       ],
       "id": "cathedral/fractal-cognitive-substrate/runtime-routing",
       "kind": "child-subsystem",
@@ -325,7 +520,7 @@
       "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/runtime-routing",
       "rationale": "The substrate needs an explicit lowering from durable structure into compact live execution state.",
       "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/runtime-routing/README.md",
-      "schema_surface": null,
+      "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/runtime-routing/SCHEMA.md",
       "status": "bounded",
       "summary": "Hot route sketch, hydration pipeline, and live execution loop for the substrate.",
       "touch_when": "Touch this when route-sketch fields, hydration behavior, or turn-loop arbitration changes."
@@ -342,6 +537,7 @@
       ],
       "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "cathedral/graphs",
       "kind": "child-subsystem",
@@ -369,6 +565,7 @@
       ],
       "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "cathedral/learning",
       "kind": "child-subsystem",
@@ -395,6 +592,7 @@
       ],
       "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "cathedral/memory",
       "kind": "child-subsystem",
@@ -422,6 +620,7 @@
       ],
       "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "cathedral/models",
       "kind": "child-subsystem",
@@ -449,6 +648,7 @@
       ],
       "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "cathedral/query-path",
       "kind": "child-subsystem",
@@ -485,6 +685,7 @@
         "coding-foundry/parameter-lineage",
         "coding-foundry/promotion"
       ],
+      "contract_node": null,
       "depends_on": [
         "cathedral",
         "harness",
@@ -517,6 +718,7 @@
       ],
       "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [
         "cathedral/deterministic-truth"
       ],
@@ -547,6 +749,7 @@
       ],
       "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [
         "cathedral/memory"
       ],
@@ -577,6 +780,7 @@
       ],
       "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [
         "cathedral/models"
       ],
@@ -605,6 +809,7 @@
       ],
       "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "coding-foundry/packets",
       "kind": "child-subsystem",
@@ -632,6 +837,7 @@
       ],
       "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [
         "cathedral/graphs"
       ],
@@ -662,6 +868,7 @@
       ],
       "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [
         "cathedral/learning"
       ],
@@ -691,6 +898,7 @@
       ],
       "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [
         "coding-foundry/packets"
       ],
@@ -726,6 +934,7 @@
         "harness/telemetry",
         "harness/runtime-planes"
       ],
+      "contract_node": null,
       "depends_on": [
         "coding-foundry"
       ],
@@ -751,6 +960,7 @@
       "allowed_dependencies": [],
       "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "harness/artifact-store",
       "kind": "child-subsystem",
@@ -777,6 +987,7 @@
       ],
       "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "harness/broker",
       "kind": "child-subsystem",
@@ -802,6 +1013,7 @@
       ],
       "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "harness/gateway",
       "kind": "child-subsystem",
@@ -828,6 +1040,7 @@
       ],
       "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "harness/runtime-planes",
       "kind": "child-subsystem",
@@ -854,6 +1067,7 @@
       ],
       "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "harness/sandbox-runner",
       "kind": "child-subsystem",
@@ -880,6 +1094,7 @@
       ],
       "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "harness/scheduler",
       "kind": "child-subsystem",
@@ -903,6 +1118,7 @@
       "allowed_dependencies": [],
       "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "harness/telemetry",
       "kind": "child-subsystem",
@@ -933,6 +1149,7 @@
         "training/hardware",
         "training/runtime-planes"
       ],
+      "contract_node": null,
       "depends_on": [
         "coding-foundry"
       ],
@@ -960,6 +1177,7 @@
       ],
       "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "training/datasets",
       "kind": "child-subsystem",
@@ -986,6 +1204,7 @@
       ],
       "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "training/hardware",
       "kind": "child-subsystem",
@@ -1012,6 +1231,7 @@
       ],
       "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "training/roles",
       "kind": "child-subsystem",
@@ -1037,6 +1257,7 @@
       ],
       "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "training/runtime-planes",
       "kind": "child-subsystem",
@@ -1071,6 +1292,7 @@
         "visual-implementation/package-ownership",
         "visual-implementation/gui-views"
       ],
+      "contract_node": null,
       "depends_on": [
         "cathedral",
         "coding-foundry"
@@ -1100,6 +1322,7 @@
       ],
       "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "visual-implementation/authoring-surface",
       "kind": "child-subsystem",
@@ -1126,6 +1349,7 @@
       ],
       "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "visual-implementation/bound-subdocumentation",
       "kind": "child-subsystem",
@@ -1152,6 +1376,7 @@
       ],
       "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "visual-implementation/gui-views",
       "kind": "child-subsystem",
@@ -1177,6 +1402,7 @@
       ],
       "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "visual-implementation/package-ownership",
       "kind": "child-subsystem",
@@ -1204,6 +1430,7 @@
       ],
       "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "visual-implementation/projections",
       "kind": "child-subsystem",
@@ -1232,6 +1459,7 @@
       ],
       "canonical_schema": "docs/schemas/STRUCTURAL_COMPILER_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "visual-implementation/structural-compiler",
       "kind": "child-subsystem",
@@ -1259,6 +1487,7 @@
       ],
       "canonical_schema": "docs/schemas/STRUCTURAL_COMPILER_SCHEMA.md",
       "child_subsystems": [],
+      "contract_node": null,
       "depends_on": [],
       "id": "visual-implementation/structural-ir",
       "kind": "child-subsystem",
