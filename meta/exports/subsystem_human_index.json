@@ -14,7 +14,8 @@
         "cathedral/models",
         "cathedral/query-path",
         "cathedral/learning",
-        "cathedral/deterministic-truth"
+        "cathedral/deterministic-truth",
+        "cathedral/fractal-cognitive-substrate"
       ],
       "depends_on": [],
       "id": "cathedral",
@@ -55,6 +56,272 @@
       "status": "bounded",
       "summary": "Exact-truth doctrine for the Cathedral.",
       "touch_when": "Touch this when deterministic truth boundaries or exact-store responsibilities change."
+    },
+    {
+      "actors": [
+        "system architects",
+        "memory and routing designers",
+        "future compiler operators"
+      ],
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/graphs",
+        "cathedral/models",
+        "cathedral/query-path",
+        "cathedral/learning",
+        "cathedral/deterministic-truth",
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/memory-topology",
+        "cathedral/fractal-cognitive-substrate/graph-topology",
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/compiler-learning",
+        "cathedral/fractal-cognitive-substrate/model-interface",
+        "cathedral/fractal-cognitive-substrate/mapflow"
+      ],
+      "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+      "child_subsystems": [
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/memory-topology",
+        "cathedral/fractal-cognitive-substrate/graph-topology",
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/compiler-learning",
+        "cathedral/fractal-cognitive-substrate/model-interface",
+        "cathedral/fractal-cognitive-substrate/mapflow"
+      ],
+      "depends_on": [],
+      "id": "cathedral/fractal-cognitive-substrate",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/fractal-cognitive-substrate/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/fractal-cognitive-substrate/OVERVIEW.md",
+      "parent": "cathedral",
+      "path": "systems/cathedral/subsystems/fractal-cognitive-substrate",
+      "rationale": "The Cathedral needs a canonical structure for the map-first substrate that binds memory, routing, contradiction, lineage, and recompilation into one executable doctrine.",
+      "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/README.md",
+      "schema_surface": "systems/cathedral/subsystems/fractal-cognitive-substrate/SCHEMA.md",
+      "status": "bounded",
+      "summary": "Persistent cognitive-topology substrate for the Cathedral.",
+      "touch_when": "Touch this when the substrate doctrine, layer map, or cross-layer invariants change."
+    },
+    {
+      "actors": [
+        "compiler designers",
+        "promotion designers",
+        "consolidation operators"
+      ],
+      "allowed_dependencies": [
+        "cathedral/learning",
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/graph-topology",
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/model-interface"
+      ],
+      "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/model-interface"
+      ],
+      "id": "cathedral/fractal-cognitive-substrate/compiler-learning",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/compiler-learning/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/compiler-learning/OVERVIEW.md",
+      "parent": "cathedral/fractal-cognitive-substrate",
+      "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/compiler-learning",
+      "rationale": "The substrate only becomes self-compiling if runtime exhaust is turned into better route priors, summaries, and durable structure.",
+      "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/compiler-learning/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Background compilation, exhaust reuse, compression, and self-rewrite loops.",
+      "touch_when": "Touch this when compiler jobs, compression families, promotion logic, or consolidation loops change."
+    },
+    {
+      "actors": [
+        "graph designers",
+        "epistemic-state designers",
+        "refutation-system builders"
+      ],
+      "allowed_dependencies": [
+        "cathedral/graphs",
+        "cathedral/deterministic-truth",
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/memory-topology"
+      ],
+      "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/fractal-cognitive-substrate/ontology"
+      ],
+      "id": "cathedral/fractal-cognitive-substrate/graph-topology",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/graph-topology/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/graph-topology/OVERVIEW.md",
+      "parent": "cathedral/fractal-cognitive-substrate",
+      "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/graph-topology",
+      "rationale": "The map is not one graph; it is a stack of typed graph surfaces with attached trust and contradiction state.",
+      "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/graph-topology/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Typed graph stack, confidence lattice, and contradiction/refutation surfaces.",
+      "touch_when": "Touch this when graph families, edge semantics, confidence vectors, or contradiction handling changes."
+    },
+    {
+      "actors": [
+        "DSL designers",
+        "compiler engineers",
+        "runtime-lowering designers"
+      ],
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/models",
+        "cathedral/query-path",
+        "cathedral/learning",
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/memory-topology",
+        "cathedral/fractal-cognitive-substrate/graph-topology",
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/compiler-learning",
+        "cathedral/fractal-cognitive-substrate/model-interface"
+      ],
+      "canonical_schema": "docs/schemas/MAPFLOW_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/runtime-routing",
+        "cathedral/fractal-cognitive-substrate/compiler-learning",
+        "cathedral/fractal-cognitive-substrate/model-interface"
+      ],
+      "id": "cathedral/fractal-cognitive-substrate/mapflow",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/mapflow/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/mapflow/OVERVIEW.md",
+      "parent": "cathedral/fractal-cognitive-substrate",
+      "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/mapflow",
+      "rationale": "FCS needs a first-class authoring and lowering surface that preserves substrate semantics while lowering only regular dense work into fast kernels.",
+      "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/mapflow/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Language and compiler surface for expressing and lowering FCS semantics.",
+      "touch_when": "Touch this when DSL constructs, IR layers, legality rules, scheduling doctrine, or backend-lowering boundaries change."
+    },
+    {
+      "actors": [
+        "memory-plane designers",
+        "hydration planners",
+        "residency-policy builders"
+      ],
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/fractal-cognitive-substrate/ontology"
+      ],
+      "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/fractal-cognitive-substrate/ontology"
+      ],
+      "id": "cathedral/fractal-cognitive-substrate/memory-topology",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/memory-topology/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/memory-topology/OVERVIEW.md",
+      "parent": "cathedral/fractal-cognitive-substrate",
+      "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/memory-topology",
+      "rationale": "The substrate only works if different memory planes have explicit roles, representations, and transfer rules.",
+      "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/memory-topology/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Cold, warm, hot, and speculative memory-plane structure for the substrate.",
+      "touch_when": "Touch this when memory planes, staging rules, or object-granularity policies change."
+    },
+    {
+      "actors": [
+        "model-interface designers",
+        "translator builders",
+        "parameterization planners"
+      ],
+      "allowed_dependencies": [
+        "cathedral/models",
+        "cathedral/learning",
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/runtime-routing"
+      ],
+      "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/fractal-cognitive-substrate/ontology"
+      ],
+      "id": "cathedral/fractal-cognitive-substrate/model-interface",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/model-interface/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/model-interface/OVERVIEW.md",
+      "parent": "cathedral/fractal-cognitive-substrate",
+      "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/model-interface",
+      "rationale": "The substrate needs a formal interface for what models do, what they do not own, and how model-adjacent artifacts enter the map.",
+      "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/model-interface/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Deterministic/probabilistic split, translators, and parameter-system interface to dense models.",
+      "touch_when": "Touch this when translator rules, model roles, or parameter-artifact boundaries change."
+    },
+    {
+      "actors": [
+        "ontology designers",
+        "schema maintainers",
+        "artifact-identity builders"
+      ],
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/graphs",
+        "cathedral/deterministic-truth"
+      ],
+      "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "cathedral/fractal-cognitive-substrate/ontology",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/ontology/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/ontology/OVERVIEW.md",
+      "parent": "cathedral/fractal-cognitive-substrate",
+      "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/ontology",
+      "rationale": "The substrate needs one reusable shell law so all later layers compose instead of drifting into incompatible object families.",
+      "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/ontology/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Universal artifact, node, payload, and contract law for the substrate.",
+      "touch_when": "Touch this when node fields, artifact classes, universal verbs, or identity semantics change."
+    },
+    {
+      "actors": [
+        "runtime designers",
+        "router builders",
+        "execution-plane operators"
+      ],
+      "allowed_dependencies": [
+        "cathedral/query-path",
+        "cathedral/models",
+        "cathedral/deterministic-truth",
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/memory-topology",
+        "cathedral/fractal-cognitive-substrate/graph-topology",
+        "cathedral/fractal-cognitive-substrate/model-interface"
+      ],
+      "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/fractal-cognitive-substrate/ontology",
+        "cathedral/fractal-cognitive-substrate/memory-topology",
+        "cathedral/fractal-cognitive-substrate/graph-topology"
+      ],
+      "id": "cathedral/fractal-cognitive-substrate/runtime-routing",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/runtime-routing/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/runtime-routing/OVERVIEW.md",
+      "parent": "cathedral/fractal-cognitive-substrate",
+      "path": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/runtime-routing",
+      "rationale": "The substrate needs an explicit lowering from durable structure into compact live execution state.",
+      "readme": "systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/runtime-routing/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Hot route sketch, hydration pipeline, and live execution loop for the substrate.",
+      "touch_when": "Touch this when route-sketch fields, hydration behavior, or turn-loop arbitration changes."
     },
     {
       "actors": [

@@ -32,7 +32,7 @@ This is the highest-level authority surface for what the final machine is suppos
 - Parent: `none`
 - Depends on: `none`
 - Allowed dependencies: `none`
-- Child subsystems: `cathedral/memory, cathedral/graphs, cathedral/models, cathedral/query-path, cathedral/learning, cathedral/deterministic-truth`
+- Child subsystems: `cathedral/memory, cathedral/graphs, cathedral/models, cathedral/query-path, cathedral/learning, cathedral/deterministic-truth, cathedral/fractal-cognitive-substrate`
 
 ## How
 

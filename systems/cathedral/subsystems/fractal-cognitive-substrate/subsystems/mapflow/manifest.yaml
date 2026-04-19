@@ -1,0 +1,25 @@
+{
+  "id": "cathedral/fractal-cognitive-substrate/mapflow",
+  "parent": "cathedral/fractal-cognitive-substrate",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/MAPFLOW_SCHEMA.md",
+  "depends_on": [
+    "cathedral/fractal-cognitive-substrate/ontology",
+    "cathedral/fractal-cognitive-substrate/runtime-routing",
+    "cathedral/fractal-cognitive-substrate/compiler-learning",
+    "cathedral/fractal-cognitive-substrate/model-interface"
+  ],
+  "allowed_dependencies": [
+    "cathedral/memory",
+    "cathedral/models",
+    "cathedral/query-path",
+    "cathedral/learning",
+    "cathedral/fractal-cognitive-substrate/ontology",
+    "cathedral/fractal-cognitive-substrate/memory-topology",
+    "cathedral/fractal-cognitive-substrate/graph-topology",
+    "cathedral/fractal-cognitive-substrate/runtime-routing",
+    "cathedral/fractal-cognitive-substrate/compiler-learning",
+    "cathedral/fractal-cognitive-substrate/model-interface"
+  ]
+}

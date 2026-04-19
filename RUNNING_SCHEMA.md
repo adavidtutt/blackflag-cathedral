@@ -6,6 +6,8 @@ tags:
   - running-schema
   - canonical
   - cathedral
+  - fractal-cognitive-substrate
+  - mapflow
   - coding-foundry
   - architecture
   - frozen
@@ -105,6 +107,56 @@ The Cathedral treats intelligence as distributed across:
 
 It does not assume intelligence lives mainly in one dense parameter blob.
 
+## Fractal Cognitive Substrate
+
+Status: `bounded`
+
+The Cathedral now has an explicit bounded doctrine for the substrate itself:
+
+- the persistent intelligence substrate is a typed, traversable, hash-addressed map over artifacts
+- dense models are subordinate organs for language, synthesis, abstraction, ambiguity resolution, and route proposal
+- deterministic records own exact knowns whenever the world is knowable
+- probabilistic systems operate where interpretation, compression, abstraction, or novelty are required
+- hot execution runs over a compact route sketch derived from the larger map
+- every traversal emits exhaust that can later be compiled into better structure
+
+The canonical deep schema for this doctrine is:
+- `docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md`
+
+The modular insertion surface for future passes is:
+- `systems/cathedral/subsystems/fractal-cognitive-substrate/`
+
+Current FCS layer families:
+- ontology and node law
+- memory topology
+- graph topology
+- runtime routing and hydration
+- compiler and learning loops
+- model interface and parameterization
+- MapFlow compiler surface
+
+## MapFlow
+
+Status: `bounded`
+
+The current bounded DSL and compiler surface for FCS is **MapFlow**.
+
+MapFlow exists to:
+- describe nodes, routes, confidence, lineage, staging, hydration, and parameter compilation
+- preserve substrate semantics in a typed IR rather than collapsing immediately into kernel logic
+- lower only dense regular transforms into Triton or CUDA class backends
+- keep hot execution pageable, budgeted, and manifest-driven
+
+Canonical MapFlow surfaces:
+- `docs/schemas/MAPFLOW_SCHEMA.md`
+- `systems/cathedral/subsystems/fractal-cognitive-substrate/subsystems/mapflow/`
+
+MapFlow is explicitly not:
+- a replacement for CUDA
+- a hardware language
+- a license to lower meaning-heavy irregular graph logic into kernels
+- a second ontology outside the node law
+
 ## Cathedral Principles
 
 Status: `frozen`
@@ -128,6 +180,8 @@ The Cathedral is organized around these principles:
   - session-level promotion
   - medium-loop adaptation
   - slow-loop consolidation
+
+These principles remain in force under the Fractal Cognitive Substrate; FCS is the current bounded structure used to elaborate them rather than replace them.
 
 ## Memory Species
 

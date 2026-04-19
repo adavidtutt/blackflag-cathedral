@@ -33,6 +33,8 @@ It is designed to do four jobs at once:
 - [systems/README.md](./systems/README.md)
 - [systems/REGISTRY.yaml](./systems/REGISTRY.yaml)
 - [docs/schemas/CATHEDRAL_SCHEMA.md](./docs/schemas/CATHEDRAL_SCHEMA.md)
+- [docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md](./docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md)
+- [docs/schemas/MAPFLOW_SCHEMA.md](./docs/schemas/MAPFLOW_SCHEMA.md)
 - [docs/schemas/FOUNDRY_SCHEMA.md](./docs/schemas/FOUNDRY_SCHEMA.md)
 - [docs/schemas/TRAINING_SCHEMA.md](./docs/schemas/TRAINING_SCHEMA.md)
 - [docs/schemas/HARNESS_SCHEMA.md](./docs/schemas/HARNESS_SCHEMA.md)

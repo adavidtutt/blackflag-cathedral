@@ -40,6 +40,25 @@ Instead, intelligence is distributed across:
 
 The system is less “a model” and more a society of memory-bearing machines.
 
+## Fractal Cognitive Substrate
+
+Status: `bounded`
+
+The current canonical refinement of the Cathedral is the **Fractal Cognitive Substrate**.
+
+Its governing posture is:
+- the map is the persistent cognitive topology
+- dense models are subordinate organs for language, synthesis, abstraction, ambiguity resolution, and route proposal
+- lineage, contradiction, route history, and answer provenance are part of intelligence itself
+- hot execution lowers into a compact route sketch rather than pretending the whole archive is live
+- inference exhaust recompiles the map over time
+
+The deep schema for this layer lives in:
+- [FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md](./FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md)
+
+The current bounded authoring and lowering surface for this layer is:
+- [MAPFLOW_SCHEMA.md](./MAPFLOW_SCHEMA.md)
+
 ## Physical Strata
 
 ### Cold Layer
@@ -192,4 +211,3 @@ It should not waste intelligence pretending to remember exact ledger facts that 
 - The Coding Foundry remains a bounded subsystem.
 - This file does not define detailed implementation schemas by itself.
 - This file does not collapse the Cathedral into a simpler agent stack.
-

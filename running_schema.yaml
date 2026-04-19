@@ -23,6 +23,7 @@ systems:
     kind: final_system
     principles:
       - distributed_intelligence
+      - fractal_cognitive_substrate
       - memory_species
       - layered_graphs
       - model_society
@@ -45,6 +46,44 @@ memory_species:
     - episodic
     - parameter
     - working
+
+fractal_cognitive_substrate:
+  status: bounded
+  canonical_file: docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md
+  role: persistent_cognitive_topology
+  principles:
+    - map_primary_model_subordinate
+    - hash_addressed_artifacts
+    - node_contract_unification
+    - hot_route_sketch
+    - deterministic_probabilistic_split
+    - exhaust_compilation
+  semantic_layers:
+    - ontology
+    - memory_topology
+    - graph_topology
+    - runtime_routing
+    - compiler_learning
+    - model_interface
+  compiler_surfaces:
+    - mapflow
+
+mapflow:
+  status: bounded
+  canonical_file: docs/schemas/MAPFLOW_SCHEMA.md
+  role: fcs_language_and_lowering_surface
+  principles:
+    - map_primary_llm_subordinate
+    - keep_meaning_in_map_ir
+    - lower_only_dense_regular_transforms
+    - kv_native_hot_projection
+    - explicit_budgets_and_manifests
+  alpha_implementation:
+    control_plane_language: rust
+    dsl_frontend: yaml_or_custom_text
+    kernel_iteration: triton
+    stable_hotspots: cuda_cutlass
+    ir_strategy: custom_map_ir_with_mlir_style_lowering
 
 graph_hierarchy:
   status: frozen

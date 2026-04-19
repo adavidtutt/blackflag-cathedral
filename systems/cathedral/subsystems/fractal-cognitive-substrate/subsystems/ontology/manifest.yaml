@@ -1,0 +1,13 @@
+{
+  "id": "cathedral/fractal-cognitive-substrate/ontology",
+  "parent": "cathedral/fractal-cognitive-substrate",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "cathedral/memory",
+    "cathedral/graphs",
+    "cathedral/deterministic-truth"
+  ]
+}

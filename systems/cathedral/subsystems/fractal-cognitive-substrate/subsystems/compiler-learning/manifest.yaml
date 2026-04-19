@@ -1,0 +1,18 @@
+{
+  "id": "cathedral/fractal-cognitive-substrate/compiler-learning",
+  "parent": "cathedral/fractal-cognitive-substrate",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+  "depends_on": [
+    "cathedral/fractal-cognitive-substrate/runtime-routing",
+    "cathedral/fractal-cognitive-substrate/model-interface"
+  ],
+  "allowed_dependencies": [
+    "cathedral/learning",
+    "cathedral/fractal-cognitive-substrate/ontology",
+    "cathedral/fractal-cognitive-substrate/graph-topology",
+    "cathedral/fractal-cognitive-substrate/runtime-routing",
+    "cathedral/fractal-cognitive-substrate/model-interface"
+  ]
+}

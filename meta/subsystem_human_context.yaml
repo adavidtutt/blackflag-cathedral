@@ -41,6 +41,54 @@
     "rationale": "Exact truth should live in exact systems whenever possible.",
     "touch_when": "Touch this when deterministic truth boundaries or exact-store responsibilities change."
   },
+  "cathedral/fractal-cognitive-substrate": {
+    "summary": "Persistent cognitive-topology substrate for the Cathedral.",
+    "actors": ["system architects", "memory and routing designers", "future compiler operators"],
+    "rationale": "The Cathedral needs a canonical structure for the map-first substrate that binds memory, routing, contradiction, lineage, and recompilation into one executable doctrine.",
+    "touch_when": "Touch this when the substrate doctrine, layer map, or cross-layer invariants change."
+  },
+  "cathedral/fractal-cognitive-substrate/ontology": {
+    "summary": "Universal artifact, node, payload, and contract law for the substrate.",
+    "actors": ["ontology designers", "schema maintainers", "artifact-identity builders"],
+    "rationale": "The substrate needs one reusable shell law so all later layers compose instead of drifting into incompatible object families.",
+    "touch_when": "Touch this when node fields, artifact classes, universal verbs, or identity semantics change."
+  },
+  "cathedral/fractal-cognitive-substrate/memory-topology": {
+    "summary": "Cold, warm, hot, and speculative memory-plane structure for the substrate.",
+    "actors": ["memory-plane designers", "hydration planners", "residency-policy builders"],
+    "rationale": "The substrate only works if different memory planes have explicit roles, representations, and transfer rules.",
+    "touch_when": "Touch this when memory planes, staging rules, or object-granularity policies change."
+  },
+  "cathedral/fractal-cognitive-substrate/graph-topology": {
+    "summary": "Typed graph stack, confidence lattice, and contradiction/refutation surfaces.",
+    "actors": ["graph designers", "epistemic-state designers", "refutation-system builders"],
+    "rationale": "The map is not one graph; it is a stack of typed graph surfaces with attached trust and contradiction state.",
+    "touch_when": "Touch this when graph families, edge semantics, confidence vectors, or contradiction handling changes."
+  },
+  "cathedral/fractal-cognitive-substrate/runtime-routing": {
+    "summary": "Hot route sketch, hydration pipeline, and live execution loop for the substrate.",
+    "actors": ["runtime designers", "router builders", "execution-plane operators"],
+    "rationale": "The substrate needs an explicit lowering from durable structure into compact live execution state.",
+    "touch_when": "Touch this when route-sketch fields, hydration behavior, or turn-loop arbitration changes."
+  },
+  "cathedral/fractal-cognitive-substrate/compiler-learning": {
+    "summary": "Background compilation, exhaust reuse, compression, and self-rewrite loops.",
+    "actors": ["compiler designers", "promotion designers", "consolidation operators"],
+    "rationale": "The substrate only becomes self-compiling if runtime exhaust is turned into better route priors, summaries, and durable structure.",
+    "touch_when": "Touch this when compiler jobs, compression families, promotion logic, or consolidation loops change."
+  },
+  "cathedral/fractal-cognitive-substrate/model-interface": {
+    "summary": "Deterministic/probabilistic split, translators, and parameter-system interface to dense models.",
+    "actors": ["model-interface designers", "translator builders", "parameterization planners"],
+    "rationale": "The substrate needs a formal interface for what models do, what they do not own, and how model-adjacent artifacts enter the map.",
+    "touch_when": "Touch this when translator rules, model roles, or parameter-artifact boundaries change."
+  },
+  "cathedral/fractal-cognitive-substrate/mapflow": {
+    "summary": "Language and compiler surface for expressing and lowering FCS semantics.",
+    "actors": ["DSL designers", "compiler engineers", "runtime-lowering designers"],
+    "rationale": "FCS needs a first-class authoring and lowering surface that preserves substrate semantics while lowering only regular dense work into fast kernels.",
+    "touch_when": "Touch this when DSL constructs, IR layers, legality rules, scheduling doctrine, or backend-lowering boundaries change."
+  },
   "coding-foundry": {
     "summary": "Cathedral-compatible coding lane that builds and later lives inside the larger system.",
     "actors": ["coding-lane designers", "harness designers", "training designers"],
@@ -216,4 +264,3 @@
     "touch_when": "Touch this when GUI/control-plane projection boundaries or view families change."
   }
 }
-

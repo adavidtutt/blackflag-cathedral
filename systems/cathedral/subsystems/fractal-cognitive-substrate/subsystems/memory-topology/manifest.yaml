@@ -1,0 +1,14 @@
+{
+  "id": "cathedral/fractal-cognitive-substrate/memory-topology",
+  "parent": "cathedral/fractal-cognitive-substrate",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md",
+  "depends_on": [
+    "cathedral/fractal-cognitive-substrate/ontology"
+  ],
+  "allowed_dependencies": [
+    "cathedral/memory",
+    "cathedral/fractal-cognitive-substrate/ontology"
+  ]
+}

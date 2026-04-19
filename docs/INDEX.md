@@ -29,6 +29,8 @@ tags:
 ## Deep Schemas
 
 - [schemas/CATHEDRAL_SCHEMA.md](./schemas/CATHEDRAL_SCHEMA.md)
+- [schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md](./schemas/FRACTAL_COGNITIVE_SUBSTRATE_SCHEMA.md)
+- [schemas/MAPFLOW_SCHEMA.md](./schemas/MAPFLOW_SCHEMA.md)
 - [schemas/FOUNDRY_SCHEMA.md](./schemas/FOUNDRY_SCHEMA.md)
 - [schemas/TRAINING_SCHEMA.md](./schemas/TRAINING_SCHEMA.md)
 - [schemas/HARNESS_SCHEMA.md](./schemas/HARNESS_SCHEMA.md)
