@@ -1,0 +1,15 @@
+{
+  "id": "coding-foundry/deterministic-truth",
+  "parent": "coding-foundry",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+  "depends_on": [
+    "cathedral/deterministic-truth"
+  ],
+  "allowed_dependencies": [
+    "coding-foundry/packets",
+    "coding-foundry/working-memory"
+  ]
+}
+

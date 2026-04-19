@@ -1,0 +1,10 @@
+{
+  "id": "harness/artifact-store",
+  "parent": "harness",
+  "kind": "child-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": []
+}
+

@@ -1,0 +1,13 @@
+{
+  "id": "training/roles",
+  "parent": "training",
+  "kind": "child-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "training/datasets",
+    "training/hardware"
+  ]
+}
+

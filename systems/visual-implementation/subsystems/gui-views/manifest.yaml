@@ -1,0 +1,13 @@
+{
+  "id": "visual-implementation/gui-views",
+  "parent": "visual-implementation",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "visual-implementation/projections",
+    "visual-implementation/structural-ir"
+  ]
+}
+

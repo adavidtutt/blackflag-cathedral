@@ -1,0 +1,12 @@
+{
+  "id": "training/datasets",
+  "parent": "training",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "training/roles"
+  ]
+}
+

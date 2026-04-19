@@ -6,6 +6,17 @@ authority_order:
   - reconciled_outside_chat
   - provisional_notes
 
+subsystem_layout:
+  status: frozen
+  root: systems
+  validator: scripts/validate_subsystems.py
+  top_level:
+    - cathedral
+    - coding-foundry
+    - harness
+    - training
+    - visual-implementation
+
 systems:
   cathedral:
     status: frozen

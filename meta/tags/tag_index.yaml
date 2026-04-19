@@ -21,3 +21,9 @@ tags:
     description: Truth-check and non-drift validation files
   visual-to-implementation:
     description: Visual harness authoring to IR to projections system
+  systems:
+    description: Modular subsystem layout and registry surfaces
+  modularity:
+    description: Files defining explicit subsystem boundaries and separable ownership
+  subsystem-graph:
+    description: Machine-readable dependency and child-registry structure

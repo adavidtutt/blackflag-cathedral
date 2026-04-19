@@ -1,0 +1,16 @@
+{
+  "id": "coding-foundry/model-species",
+  "parent": "coding-foundry",
+  "kind": "child-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+  "depends_on": [
+    "cathedral/models"
+  ],
+  "allowed_dependencies": [
+    "coding-foundry/packets",
+    "coding-foundry/memory",
+    "coding-foundry/promotion"
+  ]
+}
+

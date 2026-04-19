@@ -1,0 +1,14 @@
+{
+  "id": "cathedral/query-path",
+  "parent": "cathedral",
+  "kind": "child-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "cathedral/models",
+    "cathedral/graphs",
+    "cathedral/deterministic-truth"
+  ]
+}
+

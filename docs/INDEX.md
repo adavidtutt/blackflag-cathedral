@@ -18,6 +18,8 @@ tags:
 
 - [../RUNNING_SCHEMA.md](../RUNNING_SCHEMA.md)
 - [../running_schema.yaml](../running_schema.yaml)
+- [../systems/README.md](../systems/README.md)
+- [../systems/REGISTRY.yaml](../systems/REGISTRY.yaml)
 
 ## Deep Schemas
 
@@ -38,6 +40,7 @@ tags:
 - [wiki/Home.md](./wiki/Home.md)
 - [wiki/_Sidebar.md](./wiki/_Sidebar.md)
 - [wiki/Architecture.md](./wiki/Architecture.md)
+- [wiki/Subsystems.md](./wiki/Subsystems.md)
 - [wiki/Training.md](./wiki/Training.md)
 - [wiki/Harness.md](./wiki/Harness.md)
 - [wiki/Visual-Implementation.md](./wiki/Visual-Implementation.md)

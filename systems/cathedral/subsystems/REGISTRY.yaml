@@ -1,0 +1,13 @@
+{
+  "registry_id": "cathedral/subsystems",
+  "status": "bounded",
+  "subsystems": [
+    "cathedral/memory",
+    "cathedral/graphs",
+    "cathedral/models",
+    "cathedral/query-path",
+    "cathedral/learning",
+    "cathedral/deterministic-truth"
+  ]
+}
+

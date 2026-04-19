@@ -1,0 +1,25 @@
+{
+  "id": "harness",
+  "kind": "top-level-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+  "readme": "systems/harness/README.md",
+  "schema_surface": "systems/harness/SCHEMA.md",
+  "registry": "systems/harness/subsystems/REGISTRY.yaml",
+  "depends_on": [
+    "coding-foundry"
+  ],
+  "allowed_dependencies": [
+    "coding-foundry"
+  ],
+  "owned_subsystems": [
+    "harness/gateway",
+    "harness/scheduler",
+    "harness/broker",
+    "harness/sandbox-runner",
+    "harness/artifact-store",
+    "harness/telemetry",
+    "harness/runtime-planes"
+  ]
+}
+

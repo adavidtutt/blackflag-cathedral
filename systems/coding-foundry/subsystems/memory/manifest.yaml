@@ -1,0 +1,16 @@
+{
+  "id": "coding-foundry/memory",
+  "parent": "coding-foundry",
+  "kind": "child-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+  "depends_on": [
+    "cathedral/memory"
+  ],
+  "allowed_dependencies": [
+    "coding-foundry/deterministic-truth",
+    "coding-foundry/working-memory",
+    "coding-foundry/parameter-lineage"
+  ]
+}
+

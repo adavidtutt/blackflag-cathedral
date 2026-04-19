@@ -1,0 +1,31 @@
+{
+  "id": "coding-foundry",
+  "kind": "top-level-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+  "readme": "systems/coding-foundry/README.md",
+  "schema_surface": "systems/coding-foundry/SCHEMA.md",
+  "registry": "systems/coding-foundry/subsystems/REGISTRY.yaml",
+  "depends_on": [
+    "cathedral",
+    "harness",
+    "training",
+    "visual-implementation"
+  ],
+  "allowed_dependencies": [
+    "cathedral",
+    "harness",
+    "training",
+    "visual-implementation"
+  ],
+  "owned_subsystems": [
+    "coding-foundry/packets",
+    "coding-foundry/memory",
+    "coding-foundry/model-species",
+    "coding-foundry/deterministic-truth",
+    "coding-foundry/working-memory",
+    "coding-foundry/parameter-lineage",
+    "coding-foundry/promotion"
+  ]
+}
+

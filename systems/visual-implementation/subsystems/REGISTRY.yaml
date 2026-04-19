@@ -1,0 +1,14 @@
+{
+  "registry_id": "visual-implementation/subsystems",
+  "status": "frozen",
+  "subsystems": [
+    "visual-implementation/authoring-surface",
+    "visual-implementation/bound-subdocumentation",
+    "visual-implementation/structural-ir",
+    "visual-implementation/structural-compiler",
+    "visual-implementation/projections",
+    "visual-implementation/package-ownership",
+    "visual-implementation/gui-views"
+  ]
+}
+

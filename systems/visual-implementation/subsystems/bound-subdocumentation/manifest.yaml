@@ -1,0 +1,13 @@
+{
+  "id": "visual-implementation/bound-subdocumentation",
+  "parent": "visual-implementation",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "visual-implementation/authoring-surface",
+    "visual-implementation/structural-ir"
+  ]
+}
+

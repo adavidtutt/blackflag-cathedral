@@ -1,0 +1,27 @@
+{
+  "id": "visual-implementation",
+  "kind": "top-level-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+  "readme": "systems/visual-implementation/README.md",
+  "schema_surface": "systems/visual-implementation/SCHEMA.md",
+  "registry": "systems/visual-implementation/subsystems/REGISTRY.yaml",
+  "depends_on": [
+    "cathedral",
+    "coding-foundry"
+  ],
+  "allowed_dependencies": [
+    "cathedral",
+    "coding-foundry"
+  ],
+  "owned_subsystems": [
+    "visual-implementation/authoring-surface",
+    "visual-implementation/bound-subdocumentation",
+    "visual-implementation/structural-ir",
+    "visual-implementation/structural-compiler",
+    "visual-implementation/projections",
+    "visual-implementation/package-ownership",
+    "visual-implementation/gui-views"
+  ]
+}
+

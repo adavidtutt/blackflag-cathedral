@@ -1,0 +1,9 @@
+subsystem_manifests:
+  registry: systems/REGISTRY.yaml
+  validator: scripts/validate_subsystems.py
+  top_level:
+    cathedral: systems/cathedral/manifest.yaml
+    coding-foundry: systems/coding-foundry/manifest.yaml
+    harness: systems/harness/manifest.yaml
+    training: systems/training/manifest.yaml
+    visual-implementation: systems/visual-implementation/manifest.yaml

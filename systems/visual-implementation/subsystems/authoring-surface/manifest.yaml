@@ -1,0 +1,13 @@
+{
+  "id": "visual-implementation/authoring-surface",
+  "parent": "visual-implementation",
+  "kind": "child-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "visual-implementation/bound-subdocumentation",
+    "visual-implementation/structural-ir"
+  ]
+}
+

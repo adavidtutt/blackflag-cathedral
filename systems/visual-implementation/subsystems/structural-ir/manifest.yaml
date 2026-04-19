@@ -1,0 +1,14 @@
+{
+  "id": "visual-implementation/structural-ir",
+  "parent": "visual-implementation",
+  "kind": "child-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/STRUCTURAL_COMPILER_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "visual-implementation/bound-subdocumentation",
+    "visual-implementation/structural-compiler",
+    "visual-implementation/projections"
+  ]
+}
+

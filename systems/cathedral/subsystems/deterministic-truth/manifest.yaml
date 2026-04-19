@@ -1,0 +1,13 @@
+{
+  "id": "cathedral/deterministic-truth",
+  "parent": "cathedral",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "cathedral/memory",
+    "cathedral/query-path"
+  ]
+}
+

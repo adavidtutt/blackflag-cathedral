@@ -30,6 +30,8 @@ It is designed to do four jobs at once:
 
 - [RUNNING_SCHEMA.md](./RUNNING_SCHEMA.md)
 - [docs/INDEX.md](./docs/INDEX.md)
+- [systems/README.md](./systems/README.md)
+- [systems/REGISTRY.yaml](./systems/REGISTRY.yaml)
 - [docs/schemas/CATHEDRAL_SCHEMA.md](./docs/schemas/CATHEDRAL_SCHEMA.md)
 - [docs/schemas/FOUNDRY_SCHEMA.md](./docs/schemas/FOUNDRY_SCHEMA.md)
 - [docs/schemas/TRAINING_SCHEMA.md](./docs/schemas/TRAINING_SCHEMA.md)
@@ -60,6 +62,29 @@ For machine-readable summaries:
 - [running_schema.yaml](./running_schema.yaml)
 - [meta/tags/tag_index.yaml](./meta/tags/tag_index.yaml)
 - [meta/exports/wiki_manifest.yaml](./meta/exports/wiki_manifest.yaml)
+- [meta/exports/subsystem_manifest_index.yaml](./meta/exports/subsystem_manifest_index.yaml)
+- [systems/REGISTRY.yaml](./systems/REGISTRY.yaml)
+
+## Modular Subsystems
+
+The repo now has a real modular subsystem layout under `systems/`.
+
+Top-level subsystems:
+- `cathedral`
+- `coding-foundry`
+- `harness`
+- `training`
+- `visual-implementation`
+
+Each top-level subsystem owns:
+- its own manifest
+- its own schema surface
+- its own contracts surface
+- its own tests surface
+- its own child subsystem registry
+
+Validate the subsystem graph with:
+- `python3 scripts/validate_subsystems.py`
 
 ## Update Rule
 

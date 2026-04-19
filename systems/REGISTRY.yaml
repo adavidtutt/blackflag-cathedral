@@ -1,0 +1,12 @@
+{
+  "registry_id": "systems",
+  "status": "frozen",
+  "top_level_subsystems": [
+    "cathedral",
+    "coding-foundry",
+    "harness",
+    "training",
+    "visual-implementation"
+  ]
+}
+

@@ -1,0 +1,22 @@
+{
+  "id": "training",
+  "kind": "top-level-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
+  "readme": "systems/training/README.md",
+  "schema_surface": "systems/training/SCHEMA.md",
+  "registry": "systems/training/subsystems/REGISTRY.yaml",
+  "depends_on": [
+    "coding-foundry"
+  ],
+  "allowed_dependencies": [
+    "coding-foundry"
+  ],
+  "owned_subsystems": [
+    "training/roles",
+    "training/datasets",
+    "training/hardware",
+    "training/runtime-planes"
+  ]
+}
+

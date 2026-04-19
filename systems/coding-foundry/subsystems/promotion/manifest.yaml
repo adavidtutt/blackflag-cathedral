@@ -1,0 +1,16 @@
+{
+  "id": "coding-foundry/promotion",
+  "parent": "coding-foundry",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+  "depends_on": [
+    "cathedral/learning"
+  ],
+  "allowed_dependencies": [
+    "coding-foundry/model-species",
+    "coding-foundry/parameter-lineage",
+    "coding-foundry/deterministic-truth"
+  ]
+}
+

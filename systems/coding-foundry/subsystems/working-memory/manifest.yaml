@@ -1,0 +1,15 @@
+{
+  "id": "coding-foundry/working-memory",
+  "parent": "coding-foundry",
+  "kind": "child-subsystem",
+  "status": "bounded",
+  "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+  "depends_on": [
+    "coding-foundry/packets"
+  ],
+  "allowed_dependencies": [
+    "coding-foundry/deterministic-truth",
+    "coding-foundry/model-species"
+  ]
+}
+

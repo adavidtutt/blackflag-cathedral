@@ -1,0 +1,14 @@
+{
+  "registry_id": "coding-foundry/subsystems",
+  "status": "bounded",
+  "subsystems": [
+    "coding-foundry/packets",
+    "coding-foundry/memory",
+    "coding-foundry/model-species",
+    "coding-foundry/deterministic-truth",
+    "coding-foundry/working-memory",
+    "coding-foundry/parameter-lineage",
+    "coding-foundry/promotion"
+  ]
+}
+

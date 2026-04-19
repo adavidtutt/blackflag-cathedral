@@ -1,0 +1,15 @@
+{
+  "id": "coding-foundry/parameter-lineage",
+  "parent": "coding-foundry",
+  "kind": "child-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+  "depends_on": [
+    "cathedral/graphs"
+  ],
+  "allowed_dependencies": [
+    "coding-foundry/memory",
+    "coding-foundry/promotion"
+  ]
+}
+

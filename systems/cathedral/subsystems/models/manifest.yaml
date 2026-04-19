@@ -1,0 +1,14 @@
+{
+  "id": "cathedral/models",
+  "parent": "cathedral",
+  "kind": "child-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+  "depends_on": [],
+  "allowed_dependencies": [
+    "cathedral/graphs",
+    "cathedral/query-path",
+    "cathedral/learning"
+  ]
+}
+

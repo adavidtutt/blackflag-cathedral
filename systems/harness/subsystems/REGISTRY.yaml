@@ -1,0 +1,14 @@
+{
+  "registry_id": "harness/subsystems",
+  "status": "frozen",
+  "subsystems": [
+    "harness/gateway",
+    "harness/scheduler",
+    "harness/broker",
+    "harness/sandbox-runner",
+    "harness/artifact-store",
+    "harness/telemetry",
+    "harness/runtime-planes"
+  ]
+}
+

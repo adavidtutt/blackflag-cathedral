@@ -1,0 +1,20 @@
+{
+  "id": "cathedral",
+  "kind": "top-level-subsystem",
+  "status": "frozen",
+  "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+  "readme": "systems/cathedral/README.md",
+  "schema_surface": "systems/cathedral/SCHEMA.md",
+  "registry": "systems/cathedral/subsystems/REGISTRY.yaml",
+  "depends_on": [],
+  "allowed_dependencies": [],
+  "owned_subsystems": [
+    "cathedral/memory",
+    "cathedral/graphs",
+    "cathedral/models",
+    "cathedral/query-path",
+    "cathedral/learning",
+    "cathedral/deterministic-truth"
+  ]
+}
+

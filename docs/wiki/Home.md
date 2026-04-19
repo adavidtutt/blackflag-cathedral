@@ -16,6 +16,7 @@ This wiki is the human-readable surface of the Cathedral schema corpus.
 ## Start Here
 
 - [Architecture](./Architecture.md)
+- [Subsystems](./Subsystems.md)
 - [Visual Implementation](./Visual-Implementation.md)
 - [Foundry](./Foundry.md)
 - [Training](./Training.md)

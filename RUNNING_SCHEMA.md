@@ -54,6 +54,35 @@ If a future note is not reflected here, it is not canonical.
 Status: `bounded`
 Scope: `Cathedral-adjacent architecture and Coding Foundry subsystem`
 
+## Modular Subsystem Layout
+
+Status: `frozen`
+
+The repo now treats the architecture as a real subsystem graph under `systems/`.
+
+Top-level subsystems:
+- `cathedral`
+- `coding-foundry`
+- `harness`
+- `training`
+- `visual-implementation`
+
+Each top-level subsystem owns:
+- `README.md`
+- `SCHEMA.md`
+- `manifest.yaml`
+- `contracts/`
+- `tests/`
+- `subsystems/`
+
+Each subsystem may own child subsystems through a local subsystem registry.
+
+The canonical machine-readable registry is:
+- `systems/REGISTRY.yaml`
+
+The canonical graph validator is:
+- `scripts/validate_subsystems.py`
+
 ## Core Truth
 
 The final system is **The Cathedral**.
