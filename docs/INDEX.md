@@ -22,6 +22,9 @@ tags:
 - [../systems/REGISTRY.yaml](../systems/REGISTRY.yaml)
 - [../meta/exports/subsystem_graph.json](../meta/exports/subsystem_graph.json)
 - [../meta/exports/subsystem_graph.mmd](../meta/exports/subsystem_graph.mmd)
+- [../meta/subsystem_human_context.yaml](../meta/subsystem_human_context.yaml)
+- [../meta/exports/subsystem_human_index.md](../meta/exports/subsystem_human_index.md)
+- [../meta/exports/subsystem_human_index.json](../meta/exports/subsystem_human_index.json)
 
 ## Deep Schemas
 

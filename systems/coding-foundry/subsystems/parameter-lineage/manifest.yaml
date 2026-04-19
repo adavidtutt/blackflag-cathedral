@@ -8,8 +8,8 @@
     "cathedral/graphs"
   ],
   "allowed_dependencies": [
+    "cathedral/graphs",
     "coding-foundry/memory",
     "coding-foundry/promotion"
   ]
 }
-

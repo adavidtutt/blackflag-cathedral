@@ -61,10 +61,13 @@ For narrative browsing:
 For machine-readable summaries:
 - [running_schema.yaml](./running_schema.yaml)
 - [meta/tags/tag_index.yaml](./meta/tags/tag_index.yaml)
+- [meta/subsystem_human_context.yaml](./meta/subsystem_human_context.yaml)
 - [meta/exports/wiki_manifest.yaml](./meta/exports/wiki_manifest.yaml)
 - [meta/exports/subsystem_manifest_index.yaml](./meta/exports/subsystem_manifest_index.yaml)
 - [meta/exports/subsystem_graph.json](./meta/exports/subsystem_graph.json)
 - [meta/exports/subsystem_graph.mmd](./meta/exports/subsystem_graph.mmd)
+- [meta/exports/subsystem_human_index.json](./meta/exports/subsystem_human_index.json)
+- [meta/exports/subsystem_human_index.md](./meta/exports/subsystem_human_index.md)
 - [systems/REGISTRY.yaml](./systems/REGISTRY.yaml)
 
 ## Modular Subsystems
@@ -90,6 +93,9 @@ Validate the subsystem graph with:
 
 Export the subsystem graph with:
 - `python3 scripts/export_subsystem_graph.py`
+
+Sync human-readable subsystem surfaces with:
+- `python3 scripts/sync_subsystem_surfaces.py`
 
 GitHub-native control surfaces now live in:
 - `.github/workflows/validate-architecture.yml`

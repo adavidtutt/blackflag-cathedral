@@ -1,0 +1,219 @@
+{
+  "cathedral": {
+    "summary": "Final-system architecture that frames the whole project as a distributed cognition machine rather than a single model.",
+    "actors": ["human architect", "future cathedral controllers", "all downstream subsystem owners"],
+    "rationale": "This is the highest-level authority surface for what the final machine is supposed to be.",
+    "touch_when": "Touch this when the final-system shape, first principles, or top-level cognitive strata change."
+  },
+  "cathedral/memory": {
+    "summary": "Memory-species decomposition for the Cathedral.",
+    "actors": ["memory designers", "retrieval designers", "future memory operators"],
+    "rationale": "The Cathedral depends on memory being split into species rather than collapsed into one store.",
+    "touch_when": "Touch this when memory species, boundaries, or cross-memory responsibilities change."
+  },
+  "cathedral/graphs": {
+    "summary": "Layered graph hierarchy for the Cathedral.",
+    "actors": ["graph designers", "knowledge-layer builders", "parameter-graph consumers"],
+    "rationale": "The system needs multiple graph layers because one graph is not enough.",
+    "touch_when": "Touch this when graph layers, graph boundaries, or graph-to-memory relationships change."
+  },
+  "cathedral/models": {
+    "summary": "Model-species society for the Cathedral.",
+    "actors": ["model planners", "routing designers", "synthesis and critic designers"],
+    "rationale": "The system is a civilization of specialized minds, not one emperor model.",
+    "touch_when": "Touch this when model species, synthesis layers, or model-society roles change."
+  },
+  "cathedral/query-path": {
+    "summary": "Canonical staged query path for the Cathedral.",
+    "actors": ["route designers", "packet designers", "execution planners"],
+    "rationale": "The system must move through staged retrieval, shaping, synthesis, and critique rather than one-pass guessing.",
+    "touch_when": "Touch this when the end-to-end query stages or their boundaries change."
+  },
+  "cathedral/learning": {
+    "summary": "Multi-speed learning and consolidation loops.",
+    "actors": ["adaptation designers", "promotion designers", "consolidation planners"],
+    "rationale": "The machine learns at different speeds in different places.",
+    "touch_when": "Touch this when fast, medium, or slow learning loops change."
+  },
+  "cathedral/deterministic-truth": {
+    "summary": "Exact-truth doctrine for the Cathedral.",
+    "actors": ["truth-plane designers", "fact-store designers", "validation designers"],
+    "rationale": "Exact truth should live in exact systems whenever possible.",
+    "touch_when": "Touch this when deterministic truth boundaries or exact-store responsibilities change."
+  },
+  "coding-foundry": {
+    "summary": "Cathedral-compatible coding lane that builds and later lives inside the larger system.",
+    "actors": ["coding-lane designers", "harness designers", "training designers"],
+    "rationale": "The Coding Foundry is the bounded subsystem used to build and operationalize the coding species of the larger system.",
+    "touch_when": "Touch this when the coding lane’s purpose, scope, or top-level boundaries change."
+  },
+  "coding-foundry/packets": {
+    "summary": "Canonical packet family and packet-boundary discipline for coding work.",
+    "actors": ["packet builders", "route controllers", "validation and merge actors"],
+    "rationale": "The coding lane must move through typed packets rather than prompt sludge.",
+    "touch_when": "Touch this when packet families, packet invariants, or packet lineage rules change."
+  },
+  "coding-foundry/memory": {
+    "summary": "Coding-lane mapping of memory species.",
+    "actors": ["coding-memory designers", "trace and artifact designers", "future lane operators"],
+    "rationale": "The Foundry needs its own memory mapping while staying Cathedral-compatible.",
+    "touch_when": "Touch this when coding-memory responsibilities or boundaries change."
+  },
+  "coding-foundry/model-species": {
+    "summary": "Scouts, judges, packet builders, route controllers, synthesis models, critics, and consolidators for the coding lane.",
+    "actors": ["coding model planners", "lane designers", "critic designers"],
+    "rationale": "The coding lane itself is a model society, not one model plus prompts.",
+    "touch_when": "Touch this when coding-lane species or role assignments change."
+  },
+  "coding-foundry/deterministic-truth": {
+    "summary": "Exact coding-fact domains and boundaries for the Foundry.",
+    "actors": ["coding truth-plane designers", "repo-fact designers", "validator designers"],
+    "rationale": "The coding lane must not ask models to hallucinate exact repo facts that can be stored exactly.",
+    "touch_when": "Touch this when deterministic coding domains, keys, or exact-fact ownership changes."
+  },
+  "coding-foundry/working-memory": {
+    "summary": "Active run state for one coding attempt or route.",
+    "actors": ["route controllers", "lane workers", "failure/repair actors"],
+    "rationale": "The lane needs bounded hot state for what is currently being worked.",
+    "touch_when": "Touch this when active run state, ambiguity handling, or route-state shape changes."
+  },
+  "coding-foundry/parameter-lineage": {
+    "summary": "Lineage metadata for checkpoints and runtime artifacts used by the coding lane.",
+    "actors": ["training pipeline", "artifact registry", "future parameter-graph consumers"],
+    "rationale": "The coding lane must emit parameter lineage that can later attach to the Cathedral parameter graph.",
+    "touch_when": "Touch this when artifact ancestry, validity, or compatibility metadata changes."
+  },
+  "coding-foundry/promotion": {
+    "summary": "Promotion and consolidation hooks across fast, medium, and slow loops in the coding lane.",
+    "actors": ["promotion logic", "consolidators", "future trainer loops"],
+    "rationale": "Successful repeated behavior must have a path to become durable structure.",
+    "touch_when": "Touch this when promotion rules, consolidation triggers, or loop boundaries change."
+  },
+  "harness": {
+    "summary": "Rust control-plane harness for the coding lane.",
+    "actors": ["control-plane engineers", "backend mediators", "sandbox operators"],
+    "rationale": "The harness is the operational spine that runs the coding lane safely and economically.",
+    "touch_when": "Touch this when the harness service set, boundaries, or control-plane assumptions change."
+  },
+  "harness/gateway": {
+    "summary": "Ingress and egress boundary for the harness.",
+    "actors": ["external callers", "admission logic", "API boundary maintainers"],
+    "rationale": "The gateway owns client-facing admission and should stay separate from scheduling and execution.",
+    "touch_when": "Touch this when ingress contracts, admission checks, or outward API shaping changes."
+  },
+  "harness/scheduler": {
+    "summary": "Placement and lifecycle decision boundary for the harness.",
+    "actors": ["route planners", "queue managers", "runtime-plane selectors"],
+    "rationale": "The scheduler owns work classification, queue placement, and runtime-plane decisions.",
+    "touch_when": "Touch this when scheduling authority, leases, retries, or plane selection changes."
+  },
+  "harness/broker": {
+    "summary": "Backend invocation mediation boundary for model-serving calls.",
+    "actors": ["backend mediators", "serving integrators", "response normalizers"],
+    "rationale": "The broker isolates backend-specific semantics from the rest of the harness.",
+    "touch_when": "Touch this when backend mediation, invocation envelopes, or large-payload rules change."
+  },
+  "harness/sandbox-runner": {
+    "summary": "Isolated process and workspace execution boundary.",
+    "actors": ["tool runners", "workspace executors", "process isolation maintainers"],
+    "rationale": "The harness needs a clean boundary for code execution and tool runs.",
+    "touch_when": "Touch this when sandbox execution rules, isolation, or workspace lifecycle changes."
+  },
+  "harness/artifact-store": {
+    "summary": "Durable custody layer for artifacts and retrieval handles.",
+    "actors": ["artifact registries", "storage maintainers", "retrieval users"],
+    "rationale": "Artifacts need durable, content-addressable custody separate from workflow logic.",
+    "touch_when": "Touch this when artifact persistence, manifests, or retrieval surfaces change."
+  },
+  "harness/telemetry": {
+    "summary": "Observability boundary for logs, traces, and metrics.",
+    "actors": ["operators", "debuggers", "performance observers"],
+    "rationale": "Observability must exist without becoming the hidden workflow authority.",
+    "touch_when": "Touch this when telemetry surfaces, trace shape, or operational visibility changes."
+  },
+  "harness/runtime-planes": {
+    "summary": "Hot, warm, and cold runtime-plane distinctions for serving economics.",
+    "actors": ["runtime planners", "scheduler owners", "model-loading operators"],
+    "rationale": "Not all model tiers should stay loaded the same way all the time.",
+    "touch_when": "Touch this when plane definitions or loading economics change."
+  },
+  "training": {
+    "summary": "Role-specific model and hardware training plan for the coding lane.",
+    "actors": ["training designers", "dataset planners", "hardware planners"],
+    "rationale": "The training system preserves separate role training and its cost-aware hardware logic.",
+    "touch_when": "Touch this when role training, datasets, or hardware policy changes."
+  },
+  "training/roles": {
+    "summary": "Per-role model family and role separation rule.",
+    "actors": ["role planners", "training owners", "model-family maintainers"],
+    "rationale": "Each role keeps its own training lane and checkpoint family.",
+    "touch_when": "Touch this when role count, role identity, or base model assignment changes."
+  },
+  "training/datasets": {
+    "summary": "Dataset directions and role-specific training data mappings.",
+    "actors": ["dataset curators", "training pipeline owners", "evaluation designers"],
+    "rationale": "Role-specific training only works if the dataset boundaries are explicit.",
+    "touch_when": "Touch this when dataset mappings, corpus directions, or role-data relationships change."
+  },
+  "training/hardware": {
+    "summary": "Cheapest-acceptable-hardware policy and escalation triggers.",
+    "actors": ["hardware planners", "cost planners", "training operators"],
+    "rationale": "Quality must be preserved while still exploiting favorable compute economics.",
+    "touch_when": "Touch this when hardware classes, escalation triggers, or economic assumptions change."
+  },
+  "training/runtime-planes": {
+    "summary": "Training-linked hot, warm, and cold runtime economics.",
+    "actors": ["runtime planners", "serving planners", "training planners"],
+    "rationale": "Training and serving economics are linked through which models stay loaded and when.",
+    "touch_when": "Touch this when training-driven runtime-plane assumptions change."
+  },
+  "visual-implementation": {
+    "summary": "Truth-bearing visual authoring and compilation system.",
+    "actors": ["visual architects", "compiler designers", "GUI/control-plane designers"],
+    "rationale": "The system must be buildable visually at depth, and the visual system plus bound subdocumentation must be able to change truth.",
+    "touch_when": "Touch this when the visual authoring system, truth flow, or projection strategy changes."
+  },
+  "visual-implementation/authoring-surface": {
+    "summary": "Schematic or harness authoring surface for topology construction.",
+    "actors": ["visual authors", "system designers", "future operator-authors"],
+    "rationale": "The machine must be drawable and navigable at depth.",
+    "touch_when": "Touch this when authoring-surface assumptions or topology authoring rules change."
+  },
+  "visual-implementation/bound-subdocumentation": {
+    "summary": "Truth-bearing documentation attached to visual structures.",
+    "actors": ["visual authors", "truth maintainers", "subsystem designers"],
+    "rationale": "Truth must be changeable through the visual system, not only through downstream artifacts.",
+    "touch_when": "Touch this when the fields or rules of truth-bearing subdocumentation change."
+  },
+  "visual-implementation/structural-ir": {
+    "summary": "Machine-canonical structural layer compiled from authored truth.",
+    "actors": ["IR designers", "compiler designers", "projection generators"],
+    "rationale": "The system needs a machine-stable truth layer for regeneration and downstream targets.",
+    "touch_when": "Touch this when structural IR fields, boundaries, or authority rules change."
+  },
+  "visual-implementation/structural-compiler": {
+    "summary": "Compiler passes from authored truth into IR and projections.",
+    "actors": ["compiler designers", "projection designers", "validation designers"],
+    "rationale": "The visual system only gains leverage if its authored truth can be compiled and regenerated systematically.",
+    "touch_when": "Touch this when compiler stages, extraction rules, or validation passes change."
+  },
+  "visual-implementation/projections": {
+    "summary": "Downstream projections to code, docs, inventories, and wiki surfaces.",
+    "actors": ["code generators", "doc generators", "inventory generators"],
+    "rationale": "One authored structural model must project outward into many useful surfaces.",
+    "touch_when": "Touch this when generated outputs or projection boundaries change."
+  },
+  "visual-implementation/package-ownership": {
+    "summary": "Owned-zone rule for generated structure versus custom behavior.",
+    "actors": ["codegen designers", "human implementers", "boundary maintainers"],
+    "rationale": "Regeneration becomes a fistfight if compiler-owned and human-owned zones are not separated.",
+    "touch_when": "Touch this when package ownership rules or regeneration boundaries change."
+  },
+  "visual-implementation/gui-views": {
+    "summary": "Operator, observability, and self-visibility GUI projections.",
+    "actors": ["GUI designers", "operators", "future self-observing system layers"],
+    "rationale": "The GUI is another compiled view of the same canonical structural model.",
+    "touch_when": "Touch this when GUI/control-plane projection boundaries or view families change."
+  }
+}
+

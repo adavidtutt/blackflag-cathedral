@@ -16,6 +16,7 @@ This directory is the modular execution and ownership layout for the schema corp
 
 Each top-level subsystem has:
 - `README.md`
+- `OVERVIEW.md`
 - `SCHEMA.md`
 - `manifest.yaml`
 - `contracts/`
@@ -30,5 +31,10 @@ The goal is simple:
 - keep dependencies explicit
 - allow each subsystem to grow its own internal structure without flattening the whole repo
 
-Use `../scripts/validate_subsystems.py` to validate the subsystem graph.
+Human-readable navigation surfaces:
+- `../meta/exports/subsystem_human_index.md`
+- each subsystem-local `OVERVIEW.md`
 
+Use:
+- `python3 ../scripts/sync_subsystem_surfaces.py` to regenerate the human-readable subsystem surfaces
+- `python3 ../scripts/validate_subsystems.py` to validate the subsystem graph

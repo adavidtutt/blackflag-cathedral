@@ -1,0 +1,1003 @@
+{
+  "subsystems": [
+    {
+      "actors": [
+        "human architect",
+        "future cathedral controllers",
+        "all downstream subsystem owners"
+      ],
+      "allowed_dependencies": [],
+      "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+      "child_subsystems": [
+        "cathedral/memory",
+        "cathedral/graphs",
+        "cathedral/models",
+        "cathedral/query-path",
+        "cathedral/learning",
+        "cathedral/deterministic-truth"
+      ],
+      "depends_on": [],
+      "id": "cathedral",
+      "kind": "top-level-subsystem",
+      "manifest": "systems/cathedral/manifest.yaml",
+      "overview": "systems/cathedral/OVERVIEW.md",
+      "parent": null,
+      "path": "systems/cathedral",
+      "rationale": "This is the highest-level authority surface for what the final machine is supposed to be.",
+      "readme": "systems/cathedral/README.md",
+      "schema_surface": "systems/cathedral/SCHEMA.md",
+      "status": "frozen",
+      "summary": "Final-system architecture that frames the whole project as a distributed cognition machine rather than a single model.",
+      "touch_when": "Touch this when the final-system shape, first principles, or top-level cognitive strata change."
+    },
+    {
+      "actors": [
+        "truth-plane designers",
+        "fact-store designers",
+        "validation designers"
+      ],
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/query-path"
+      ],
+      "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "cathedral/deterministic-truth",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/deterministic-truth/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/deterministic-truth/OVERVIEW.md",
+      "parent": "cathedral",
+      "path": "systems/cathedral/subsystems/deterministic-truth",
+      "rationale": "Exact truth should live in exact systems whenever possible.",
+      "readme": "systems/cathedral/subsystems/deterministic-truth/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Exact-truth doctrine for the Cathedral.",
+      "touch_when": "Touch this when deterministic truth boundaries or exact-store responsibilities change."
+    },
+    {
+      "actors": [
+        "graph designers",
+        "knowledge-layer builders",
+        "parameter-graph consumers"
+      ],
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/models"
+      ],
+      "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "cathedral/graphs",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/graphs/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/graphs/OVERVIEW.md",
+      "parent": "cathedral",
+      "path": "systems/cathedral/subsystems/graphs",
+      "rationale": "The system needs multiple graph layers because one graph is not enough.",
+      "readme": "systems/cathedral/subsystems/graphs/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Layered graph hierarchy for the Cathedral.",
+      "touch_when": "Touch this when graph layers, graph boundaries, or graph-to-memory relationships change."
+    },
+    {
+      "actors": [
+        "adaptation designers",
+        "promotion designers",
+        "consolidation planners"
+      ],
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/models",
+        "cathedral/graphs"
+      ],
+      "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "cathedral/learning",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/learning/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/learning/OVERVIEW.md",
+      "parent": "cathedral",
+      "path": "systems/cathedral/subsystems/learning",
+      "rationale": "The machine learns at different speeds in different places.",
+      "readme": "systems/cathedral/subsystems/learning/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Multi-speed learning and consolidation loops.",
+      "touch_when": "Touch this when fast, medium, or slow learning loops change."
+    },
+    {
+      "actors": [
+        "memory designers",
+        "retrieval designers",
+        "future memory operators"
+      ],
+      "allowed_dependencies": [
+        "cathedral/graphs",
+        "cathedral/deterministic-truth"
+      ],
+      "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "cathedral/memory",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/memory/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/memory/OVERVIEW.md",
+      "parent": "cathedral",
+      "path": "systems/cathedral/subsystems/memory",
+      "rationale": "The Cathedral depends on memory being split into species rather than collapsed into one store.",
+      "readme": "systems/cathedral/subsystems/memory/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Memory-species decomposition for the Cathedral.",
+      "touch_when": "Touch this when memory species, boundaries, or cross-memory responsibilities change."
+    },
+    {
+      "actors": [
+        "model planners",
+        "routing designers",
+        "synthesis and critic designers"
+      ],
+      "allowed_dependencies": [
+        "cathedral/graphs",
+        "cathedral/query-path",
+        "cathedral/learning"
+      ],
+      "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "cathedral/models",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/models/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/models/OVERVIEW.md",
+      "parent": "cathedral",
+      "path": "systems/cathedral/subsystems/models",
+      "rationale": "The system is a civilization of specialized minds, not one emperor model.",
+      "readme": "systems/cathedral/subsystems/models/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Model-species society for the Cathedral.",
+      "touch_when": "Touch this when model species, synthesis layers, or model-society roles change."
+    },
+    {
+      "actors": [
+        "route designers",
+        "packet designers",
+        "execution planners"
+      ],
+      "allowed_dependencies": [
+        "cathedral/models",
+        "cathedral/graphs",
+        "cathedral/deterministic-truth"
+      ],
+      "canonical_schema": "docs/schemas/CATHEDRAL_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "cathedral/query-path",
+      "kind": "child-subsystem",
+      "manifest": "systems/cathedral/subsystems/query-path/manifest.yaml",
+      "overview": "systems/cathedral/subsystems/query-path/OVERVIEW.md",
+      "parent": "cathedral",
+      "path": "systems/cathedral/subsystems/query-path",
+      "rationale": "The system must move through staged retrieval, shaping, synthesis, and critique rather than one-pass guessing.",
+      "readme": "systems/cathedral/subsystems/query-path/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Canonical staged query path for the Cathedral.",
+      "touch_when": "Touch this when the end-to-end query stages or their boundaries change."
+    },
+    {
+      "actors": [
+        "coding-lane designers",
+        "harness designers",
+        "training designers"
+      ],
+      "allowed_dependencies": [
+        "cathedral",
+        "harness",
+        "training",
+        "visual-implementation"
+      ],
+      "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+      "child_subsystems": [
+        "coding-foundry/packets",
+        "coding-foundry/memory",
+        "coding-foundry/model-species",
+        "coding-foundry/deterministic-truth",
+        "coding-foundry/working-memory",
+        "coding-foundry/parameter-lineage",
+        "coding-foundry/promotion"
+      ],
+      "depends_on": [
+        "cathedral",
+        "harness",
+        "training",
+        "visual-implementation"
+      ],
+      "id": "coding-foundry",
+      "kind": "top-level-subsystem",
+      "manifest": "systems/coding-foundry/manifest.yaml",
+      "overview": "systems/coding-foundry/OVERVIEW.md",
+      "parent": null,
+      "path": "systems/coding-foundry",
+      "rationale": "The Coding Foundry is the bounded subsystem used to build and operationalize the coding species of the larger system.",
+      "readme": "systems/coding-foundry/README.md",
+      "schema_surface": "systems/coding-foundry/SCHEMA.md",
+      "status": "frozen",
+      "summary": "Cathedral-compatible coding lane that builds and later lives inside the larger system.",
+      "touch_when": "Touch this when the coding lane\u2019s purpose, scope, or top-level boundaries change."
+    },
+    {
+      "actors": [
+        "coding truth-plane designers",
+        "repo-fact designers",
+        "validator designers"
+      ],
+      "allowed_dependencies": [
+        "cathedral/deterministic-truth",
+        "coding-foundry/packets",
+        "coding-foundry/working-memory"
+      ],
+      "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/deterministic-truth"
+      ],
+      "id": "coding-foundry/deterministic-truth",
+      "kind": "child-subsystem",
+      "manifest": "systems/coding-foundry/subsystems/deterministic-truth/manifest.yaml",
+      "overview": "systems/coding-foundry/subsystems/deterministic-truth/OVERVIEW.md",
+      "parent": "coding-foundry",
+      "path": "systems/coding-foundry/subsystems/deterministic-truth",
+      "rationale": "The coding lane must not ask models to hallucinate exact repo facts that can be stored exactly.",
+      "readme": "systems/coding-foundry/subsystems/deterministic-truth/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Exact coding-fact domains and boundaries for the Foundry.",
+      "touch_when": "Touch this when deterministic coding domains, keys, or exact-fact ownership changes."
+    },
+    {
+      "actors": [
+        "coding-memory designers",
+        "trace and artifact designers",
+        "future lane operators"
+      ],
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "coding-foundry/deterministic-truth",
+        "coding-foundry/working-memory",
+        "coding-foundry/parameter-lineage"
+      ],
+      "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/memory"
+      ],
+      "id": "coding-foundry/memory",
+      "kind": "child-subsystem",
+      "manifest": "systems/coding-foundry/subsystems/memory/manifest.yaml",
+      "overview": "systems/coding-foundry/subsystems/memory/OVERVIEW.md",
+      "parent": "coding-foundry",
+      "path": "systems/coding-foundry/subsystems/memory",
+      "rationale": "The Foundry needs its own memory mapping while staying Cathedral-compatible.",
+      "readme": "systems/coding-foundry/subsystems/memory/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Coding-lane mapping of memory species.",
+      "touch_when": "Touch this when coding-memory responsibilities or boundaries change."
+    },
+    {
+      "actors": [
+        "coding model planners",
+        "lane designers",
+        "critic designers"
+      ],
+      "allowed_dependencies": [
+        "cathedral/models",
+        "coding-foundry/packets",
+        "coding-foundry/memory",
+        "coding-foundry/promotion"
+      ],
+      "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/models"
+      ],
+      "id": "coding-foundry/model-species",
+      "kind": "child-subsystem",
+      "manifest": "systems/coding-foundry/subsystems/model-species/manifest.yaml",
+      "overview": "systems/coding-foundry/subsystems/model-species/OVERVIEW.md",
+      "parent": "coding-foundry",
+      "path": "systems/coding-foundry/subsystems/model-species",
+      "rationale": "The coding lane itself is a model society, not one model plus prompts.",
+      "readme": "systems/coding-foundry/subsystems/model-species/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Scouts, judges, packet builders, route controllers, synthesis models, critics, and consolidators for the coding lane.",
+      "touch_when": "Touch this when coding-lane species or role assignments change."
+    },
+    {
+      "actors": [
+        "packet builders",
+        "route controllers",
+        "validation and merge actors"
+      ],
+      "allowed_dependencies": [
+        "coding-foundry/deterministic-truth",
+        "coding-foundry/working-memory"
+      ],
+      "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "coding-foundry/packets",
+      "kind": "child-subsystem",
+      "manifest": "systems/coding-foundry/subsystems/packets/manifest.yaml",
+      "overview": "systems/coding-foundry/subsystems/packets/OVERVIEW.md",
+      "parent": "coding-foundry",
+      "path": "systems/coding-foundry/subsystems/packets",
+      "rationale": "The coding lane must move through typed packets rather than prompt sludge.",
+      "readme": "systems/coding-foundry/subsystems/packets/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Canonical packet family and packet-boundary discipline for coding work.",
+      "touch_when": "Touch this when packet families, packet invariants, or packet lineage rules change."
+    },
+    {
+      "actors": [
+        "training pipeline",
+        "artifact registry",
+        "future parameter-graph consumers"
+      ],
+      "allowed_dependencies": [
+        "cathedral/graphs",
+        "coding-foundry/memory",
+        "coding-foundry/promotion"
+      ],
+      "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/graphs"
+      ],
+      "id": "coding-foundry/parameter-lineage",
+      "kind": "child-subsystem",
+      "manifest": "systems/coding-foundry/subsystems/parameter-lineage/manifest.yaml",
+      "overview": "systems/coding-foundry/subsystems/parameter-lineage/OVERVIEW.md",
+      "parent": "coding-foundry",
+      "path": "systems/coding-foundry/subsystems/parameter-lineage",
+      "rationale": "The coding lane must emit parameter lineage that can later attach to the Cathedral parameter graph.",
+      "readme": "systems/coding-foundry/subsystems/parameter-lineage/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Lineage metadata for checkpoints and runtime artifacts used by the coding lane.",
+      "touch_when": "Touch this when artifact ancestry, validity, or compatibility metadata changes."
+    },
+    {
+      "actors": [
+        "promotion logic",
+        "consolidators",
+        "future trainer loops"
+      ],
+      "allowed_dependencies": [
+        "cathedral/learning",
+        "coding-foundry/model-species",
+        "coding-foundry/parameter-lineage",
+        "coding-foundry/deterministic-truth"
+      ],
+      "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "cathedral/learning"
+      ],
+      "id": "coding-foundry/promotion",
+      "kind": "child-subsystem",
+      "manifest": "systems/coding-foundry/subsystems/promotion/manifest.yaml",
+      "overview": "systems/coding-foundry/subsystems/promotion/OVERVIEW.md",
+      "parent": "coding-foundry",
+      "path": "systems/coding-foundry/subsystems/promotion",
+      "rationale": "Successful repeated behavior must have a path to become durable structure.",
+      "readme": "systems/coding-foundry/subsystems/promotion/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Promotion and consolidation hooks across fast, medium, and slow loops in the coding lane.",
+      "touch_when": "Touch this when promotion rules, consolidation triggers, or loop boundaries change."
+    },
+    {
+      "actors": [
+        "route controllers",
+        "lane workers",
+        "failure/repair actors"
+      ],
+      "allowed_dependencies": [
+        "coding-foundry/packets",
+        "coding-foundry/deterministic-truth",
+        "coding-foundry/model-species"
+      ],
+      "canonical_schema": "docs/schemas/FOUNDRY_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [
+        "coding-foundry/packets"
+      ],
+      "id": "coding-foundry/working-memory",
+      "kind": "child-subsystem",
+      "manifest": "systems/coding-foundry/subsystems/working-memory/manifest.yaml",
+      "overview": "systems/coding-foundry/subsystems/working-memory/OVERVIEW.md",
+      "parent": "coding-foundry",
+      "path": "systems/coding-foundry/subsystems/working-memory",
+      "rationale": "The lane needs bounded hot state for what is currently being worked.",
+      "readme": "systems/coding-foundry/subsystems/working-memory/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Active run state for one coding attempt or route.",
+      "touch_when": "Touch this when active run state, ambiguity handling, or route-state shape changes."
+    },
+    {
+      "actors": [
+        "control-plane engineers",
+        "backend mediators",
+        "sandbox operators"
+      ],
+      "allowed_dependencies": [
+        "coding-foundry"
+      ],
+      "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+      "child_subsystems": [
+        "harness/gateway",
+        "harness/scheduler",
+        "harness/broker",
+        "harness/sandbox-runner",
+        "harness/artifact-store",
+        "harness/telemetry",
+        "harness/runtime-planes"
+      ],
+      "depends_on": [
+        "coding-foundry"
+      ],
+      "id": "harness",
+      "kind": "top-level-subsystem",
+      "manifest": "systems/harness/manifest.yaml",
+      "overview": "systems/harness/OVERVIEW.md",
+      "parent": null,
+      "path": "systems/harness",
+      "rationale": "The harness is the operational spine that runs the coding lane safely and economically.",
+      "readme": "systems/harness/README.md",
+      "schema_surface": "systems/harness/SCHEMA.md",
+      "status": "frozen",
+      "summary": "Rust control-plane harness for the coding lane.",
+      "touch_when": "Touch this when the harness service set, boundaries, or control-plane assumptions change."
+    },
+    {
+      "actors": [
+        "artifact registries",
+        "storage maintainers",
+        "retrieval users"
+      ],
+      "allowed_dependencies": [],
+      "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "harness/artifact-store",
+      "kind": "child-subsystem",
+      "manifest": "systems/harness/subsystems/artifact-store/manifest.yaml",
+      "overview": "systems/harness/subsystems/artifact-store/OVERVIEW.md",
+      "parent": "harness",
+      "path": "systems/harness/subsystems/artifact-store",
+      "rationale": "Artifacts need durable, content-addressable custody separate from workflow logic.",
+      "readme": "systems/harness/subsystems/artifact-store/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Durable custody layer for artifacts and retrieval handles.",
+      "touch_when": "Touch this when artifact persistence, manifests, or retrieval surfaces change."
+    },
+    {
+      "actors": [
+        "backend mediators",
+        "serving integrators",
+        "response normalizers"
+      ],
+      "allowed_dependencies": [
+        "harness/sandbox-runner",
+        "harness/artifact-store"
+      ],
+      "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "harness/broker",
+      "kind": "child-subsystem",
+      "manifest": "systems/harness/subsystems/broker/manifest.yaml",
+      "overview": "systems/harness/subsystems/broker/OVERVIEW.md",
+      "parent": "harness",
+      "path": "systems/harness/subsystems/broker",
+      "rationale": "The broker isolates backend-specific semantics from the rest of the harness.",
+      "readme": "systems/harness/subsystems/broker/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Backend invocation mediation boundary for model-serving calls.",
+      "touch_when": "Touch this when backend mediation, invocation envelopes, or large-payload rules change."
+    },
+    {
+      "actors": [
+        "external callers",
+        "admission logic",
+        "API boundary maintainers"
+      ],
+      "allowed_dependencies": [
+        "harness/scheduler"
+      ],
+      "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "harness/gateway",
+      "kind": "child-subsystem",
+      "manifest": "systems/harness/subsystems/gateway/manifest.yaml",
+      "overview": "systems/harness/subsystems/gateway/OVERVIEW.md",
+      "parent": "harness",
+      "path": "systems/harness/subsystems/gateway",
+      "rationale": "The gateway owns client-facing admission and should stay separate from scheduling and execution.",
+      "readme": "systems/harness/subsystems/gateway/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Ingress and egress boundary for the harness.",
+      "touch_when": "Touch this when ingress contracts, admission checks, or outward API shaping changes."
+    },
+    {
+      "actors": [
+        "runtime planners",
+        "scheduler owners",
+        "model-loading operators"
+      ],
+      "allowed_dependencies": [
+        "harness/scheduler",
+        "training/runtime-planes"
+      ],
+      "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "harness/runtime-planes",
+      "kind": "child-subsystem",
+      "manifest": "systems/harness/subsystems/runtime-planes/manifest.yaml",
+      "overview": "systems/harness/subsystems/runtime-planes/OVERVIEW.md",
+      "parent": "harness",
+      "path": "systems/harness/subsystems/runtime-planes",
+      "rationale": "Not all model tiers should stay loaded the same way all the time.",
+      "readme": "systems/harness/subsystems/runtime-planes/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Hot, warm, and cold runtime-plane distinctions for serving economics.",
+      "touch_when": "Touch this when plane definitions or loading economics change."
+    },
+    {
+      "actors": [
+        "tool runners",
+        "workspace executors",
+        "process isolation maintainers"
+      ],
+      "allowed_dependencies": [
+        "harness/artifact-store",
+        "harness/telemetry"
+      ],
+      "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "harness/sandbox-runner",
+      "kind": "child-subsystem",
+      "manifest": "systems/harness/subsystems/sandbox-runner/manifest.yaml",
+      "overview": "systems/harness/subsystems/sandbox-runner/OVERVIEW.md",
+      "parent": "harness",
+      "path": "systems/harness/subsystems/sandbox-runner",
+      "rationale": "The harness needs a clean boundary for code execution and tool runs.",
+      "readme": "systems/harness/subsystems/sandbox-runner/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Isolated process and workspace execution boundary.",
+      "touch_when": "Touch this when sandbox execution rules, isolation, or workspace lifecycle changes."
+    },
+    {
+      "actors": [
+        "route planners",
+        "queue managers",
+        "runtime-plane selectors"
+      ],
+      "allowed_dependencies": [
+        "harness/broker",
+        "harness/runtime-planes"
+      ],
+      "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "harness/scheduler",
+      "kind": "child-subsystem",
+      "manifest": "systems/harness/subsystems/scheduler/manifest.yaml",
+      "overview": "systems/harness/subsystems/scheduler/OVERVIEW.md",
+      "parent": "harness",
+      "path": "systems/harness/subsystems/scheduler",
+      "rationale": "The scheduler owns work classification, queue placement, and runtime-plane decisions.",
+      "readme": "systems/harness/subsystems/scheduler/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Placement and lifecycle decision boundary for the harness.",
+      "touch_when": "Touch this when scheduling authority, leases, retries, or plane selection changes."
+    },
+    {
+      "actors": [
+        "operators",
+        "debuggers",
+        "performance observers"
+      ],
+      "allowed_dependencies": [],
+      "canonical_schema": "docs/schemas/HARNESS_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "harness/telemetry",
+      "kind": "child-subsystem",
+      "manifest": "systems/harness/subsystems/telemetry/manifest.yaml",
+      "overview": "systems/harness/subsystems/telemetry/OVERVIEW.md",
+      "parent": "harness",
+      "path": "systems/harness/subsystems/telemetry",
+      "rationale": "Observability must exist without becoming the hidden workflow authority.",
+      "readme": "systems/harness/subsystems/telemetry/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Observability boundary for logs, traces, and metrics.",
+      "touch_when": "Touch this when telemetry surfaces, trace shape, or operational visibility changes."
+    },
+    {
+      "actors": [
+        "training designers",
+        "dataset planners",
+        "hardware planners"
+      ],
+      "allowed_dependencies": [
+        "coding-foundry"
+      ],
+      "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
+      "child_subsystems": [
+        "training/roles",
+        "training/datasets",
+        "training/hardware",
+        "training/runtime-planes"
+      ],
+      "depends_on": [
+        "coding-foundry"
+      ],
+      "id": "training",
+      "kind": "top-level-subsystem",
+      "manifest": "systems/training/manifest.yaml",
+      "overview": "systems/training/OVERVIEW.md",
+      "parent": null,
+      "path": "systems/training",
+      "rationale": "The training system preserves separate role training and its cost-aware hardware logic.",
+      "readme": "systems/training/README.md",
+      "schema_surface": "systems/training/SCHEMA.md",
+      "status": "frozen",
+      "summary": "Role-specific model and hardware training plan for the coding lane.",
+      "touch_when": "Touch this when role training, datasets, or hardware policy changes."
+    },
+    {
+      "actors": [
+        "dataset curators",
+        "training pipeline owners",
+        "evaluation designers"
+      ],
+      "allowed_dependencies": [
+        "training/roles"
+      ],
+      "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "training/datasets",
+      "kind": "child-subsystem",
+      "manifest": "systems/training/subsystems/datasets/manifest.yaml",
+      "overview": "systems/training/subsystems/datasets/OVERVIEW.md",
+      "parent": "training",
+      "path": "systems/training/subsystems/datasets",
+      "rationale": "Role-specific training only works if the dataset boundaries are explicit.",
+      "readme": "systems/training/subsystems/datasets/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Dataset directions and role-specific training data mappings.",
+      "touch_when": "Touch this when dataset mappings, corpus directions, or role-data relationships change."
+    },
+    {
+      "actors": [
+        "hardware planners",
+        "cost planners",
+        "training operators"
+      ],
+      "allowed_dependencies": [
+        "training/roles",
+        "training/runtime-planes"
+      ],
+      "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "training/hardware",
+      "kind": "child-subsystem",
+      "manifest": "systems/training/subsystems/hardware/manifest.yaml",
+      "overview": "systems/training/subsystems/hardware/OVERVIEW.md",
+      "parent": "training",
+      "path": "systems/training/subsystems/hardware",
+      "rationale": "Quality must be preserved while still exploiting favorable compute economics.",
+      "readme": "systems/training/subsystems/hardware/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Cheapest-acceptable-hardware policy and escalation triggers.",
+      "touch_when": "Touch this when hardware classes, escalation triggers, or economic assumptions change."
+    },
+    {
+      "actors": [
+        "role planners",
+        "training owners",
+        "model-family maintainers"
+      ],
+      "allowed_dependencies": [
+        "training/datasets",
+        "training/hardware"
+      ],
+      "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "training/roles",
+      "kind": "child-subsystem",
+      "manifest": "systems/training/subsystems/roles/manifest.yaml",
+      "overview": "systems/training/subsystems/roles/OVERVIEW.md",
+      "parent": "training",
+      "path": "systems/training/subsystems/roles",
+      "rationale": "Each role keeps its own training lane and checkpoint family.",
+      "readme": "systems/training/subsystems/roles/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Per-role model family and role separation rule.",
+      "touch_when": "Touch this when role count, role identity, or base model assignment changes."
+    },
+    {
+      "actors": [
+        "runtime planners",
+        "serving planners",
+        "training planners"
+      ],
+      "allowed_dependencies": [
+        "training/hardware"
+      ],
+      "canonical_schema": "docs/schemas/TRAINING_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "training/runtime-planes",
+      "kind": "child-subsystem",
+      "manifest": "systems/training/subsystems/runtime-planes/manifest.yaml",
+      "overview": "systems/training/subsystems/runtime-planes/OVERVIEW.md",
+      "parent": "training",
+      "path": "systems/training/subsystems/runtime-planes",
+      "rationale": "Training and serving economics are linked through which models stay loaded and when.",
+      "readme": "systems/training/subsystems/runtime-planes/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Training-linked hot, warm, and cold runtime economics.",
+      "touch_when": "Touch this when training-driven runtime-plane assumptions change."
+    },
+    {
+      "actors": [
+        "visual architects",
+        "compiler designers",
+        "GUI/control-plane designers"
+      ],
+      "allowed_dependencies": [
+        "cathedral",
+        "coding-foundry"
+      ],
+      "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+      "child_subsystems": [
+        "visual-implementation/authoring-surface",
+        "visual-implementation/bound-subdocumentation",
+        "visual-implementation/structural-ir",
+        "visual-implementation/structural-compiler",
+        "visual-implementation/projections",
+        "visual-implementation/package-ownership",
+        "visual-implementation/gui-views"
+      ],
+      "depends_on": [
+        "cathedral",
+        "coding-foundry"
+      ],
+      "id": "visual-implementation",
+      "kind": "top-level-subsystem",
+      "manifest": "systems/visual-implementation/manifest.yaml",
+      "overview": "systems/visual-implementation/OVERVIEW.md",
+      "parent": null,
+      "path": "systems/visual-implementation",
+      "rationale": "The system must be buildable visually at depth, and the visual system plus bound subdocumentation must be able to change truth.",
+      "readme": "systems/visual-implementation/README.md",
+      "schema_surface": "systems/visual-implementation/SCHEMA.md",
+      "status": "frozen",
+      "summary": "Truth-bearing visual authoring and compilation system.",
+      "touch_when": "Touch this when the visual authoring system, truth flow, or projection strategy changes."
+    },
+    {
+      "actors": [
+        "visual authors",
+        "system designers",
+        "future operator-authors"
+      ],
+      "allowed_dependencies": [
+        "visual-implementation/bound-subdocumentation",
+        "visual-implementation/structural-ir"
+      ],
+      "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "visual-implementation/authoring-surface",
+      "kind": "child-subsystem",
+      "manifest": "systems/visual-implementation/subsystems/authoring-surface/manifest.yaml",
+      "overview": "systems/visual-implementation/subsystems/authoring-surface/OVERVIEW.md",
+      "parent": "visual-implementation",
+      "path": "systems/visual-implementation/subsystems/authoring-surface",
+      "rationale": "The machine must be drawable and navigable at depth.",
+      "readme": "systems/visual-implementation/subsystems/authoring-surface/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Schematic or harness authoring surface for topology construction.",
+      "touch_when": "Touch this when authoring-surface assumptions or topology authoring rules change."
+    },
+    {
+      "actors": [
+        "visual authors",
+        "truth maintainers",
+        "subsystem designers"
+      ],
+      "allowed_dependencies": [
+        "visual-implementation/authoring-surface",
+        "visual-implementation/structural-ir"
+      ],
+      "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "visual-implementation/bound-subdocumentation",
+      "kind": "child-subsystem",
+      "manifest": "systems/visual-implementation/subsystems/bound-subdocumentation/manifest.yaml",
+      "overview": "systems/visual-implementation/subsystems/bound-subdocumentation/OVERVIEW.md",
+      "parent": "visual-implementation",
+      "path": "systems/visual-implementation/subsystems/bound-subdocumentation",
+      "rationale": "Truth must be changeable through the visual system, not only through downstream artifacts.",
+      "readme": "systems/visual-implementation/subsystems/bound-subdocumentation/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Truth-bearing documentation attached to visual structures.",
+      "touch_when": "Touch this when the fields or rules of truth-bearing subdocumentation change."
+    },
+    {
+      "actors": [
+        "GUI designers",
+        "operators",
+        "future self-observing system layers"
+      ],
+      "allowed_dependencies": [
+        "visual-implementation/projections",
+        "visual-implementation/structural-ir"
+      ],
+      "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "visual-implementation/gui-views",
+      "kind": "child-subsystem",
+      "manifest": "systems/visual-implementation/subsystems/gui-views/manifest.yaml",
+      "overview": "systems/visual-implementation/subsystems/gui-views/OVERVIEW.md",
+      "parent": "visual-implementation",
+      "path": "systems/visual-implementation/subsystems/gui-views",
+      "rationale": "The GUI is another compiled view of the same canonical structural model.",
+      "readme": "systems/visual-implementation/subsystems/gui-views/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Operator, observability, and self-visibility GUI projections.",
+      "touch_when": "Touch this when GUI/control-plane projection boundaries or view families change."
+    },
+    {
+      "actors": [
+        "codegen designers",
+        "human implementers",
+        "boundary maintainers"
+      ],
+      "allowed_dependencies": [
+        "visual-implementation/projections"
+      ],
+      "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "visual-implementation/package-ownership",
+      "kind": "child-subsystem",
+      "manifest": "systems/visual-implementation/subsystems/package-ownership/manifest.yaml",
+      "overview": "systems/visual-implementation/subsystems/package-ownership/OVERVIEW.md",
+      "parent": "visual-implementation",
+      "path": "systems/visual-implementation/subsystems/package-ownership",
+      "rationale": "Regeneration becomes a fistfight if compiler-owned and human-owned zones are not separated.",
+      "readme": "systems/visual-implementation/subsystems/package-ownership/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Owned-zone rule for generated structure versus custom behavior.",
+      "touch_when": "Touch this when package ownership rules or regeneration boundaries change."
+    },
+    {
+      "actors": [
+        "code generators",
+        "doc generators",
+        "inventory generators"
+      ],
+      "allowed_dependencies": [
+        "visual-implementation/structural-ir",
+        "visual-implementation/package-ownership",
+        "visual-implementation/gui-views"
+      ],
+      "canonical_schema": "docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "visual-implementation/projections",
+      "kind": "child-subsystem",
+      "manifest": "systems/visual-implementation/subsystems/projections/manifest.yaml",
+      "overview": "systems/visual-implementation/subsystems/projections/OVERVIEW.md",
+      "parent": "visual-implementation",
+      "path": "systems/visual-implementation/subsystems/projections",
+      "rationale": "One authored structural model must project outward into many useful surfaces.",
+      "readme": "systems/visual-implementation/subsystems/projections/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Downstream projections to code, docs, inventories, and wiki surfaces.",
+      "touch_when": "Touch this when generated outputs or projection boundaries change."
+    },
+    {
+      "actors": [
+        "compiler designers",
+        "projection designers",
+        "validation designers"
+      ],
+      "allowed_dependencies": [
+        "visual-implementation/structural-ir",
+        "visual-implementation/projections",
+        "visual-implementation/package-ownership",
+        "visual-implementation/gui-views"
+      ],
+      "canonical_schema": "docs/schemas/STRUCTURAL_COMPILER_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "visual-implementation/structural-compiler",
+      "kind": "child-subsystem",
+      "manifest": "systems/visual-implementation/subsystems/structural-compiler/manifest.yaml",
+      "overview": "systems/visual-implementation/subsystems/structural-compiler/OVERVIEW.md",
+      "parent": "visual-implementation",
+      "path": "systems/visual-implementation/subsystems/structural-compiler",
+      "rationale": "The visual system only gains leverage if its authored truth can be compiled and regenerated systematically.",
+      "readme": "systems/visual-implementation/subsystems/structural-compiler/README.md",
+      "schema_surface": null,
+      "status": "bounded",
+      "summary": "Compiler passes from authored truth into IR and projections.",
+      "touch_when": "Touch this when compiler stages, extraction rules, or validation passes change."
+    },
+    {
+      "actors": [
+        "IR designers",
+        "compiler designers",
+        "projection generators"
+      ],
+      "allowed_dependencies": [
+        "visual-implementation/bound-subdocumentation",
+        "visual-implementation/structural-compiler",
+        "visual-implementation/projections"
+      ],
+      "canonical_schema": "docs/schemas/STRUCTURAL_COMPILER_SCHEMA.md",
+      "child_subsystems": [],
+      "depends_on": [],
+      "id": "visual-implementation/structural-ir",
+      "kind": "child-subsystem",
+      "manifest": "systems/visual-implementation/subsystems/structural-ir/manifest.yaml",
+      "overview": "systems/visual-implementation/subsystems/structural-ir/OVERVIEW.md",
+      "parent": "visual-implementation",
+      "path": "systems/visual-implementation/subsystems/structural-ir",
+      "rationale": "The system needs a machine-stable truth layer for regeneration and downstream targets.",
+      "readme": "systems/visual-implementation/subsystems/structural-ir/README.md",
+      "schema_surface": null,
+      "status": "frozen",
+      "summary": "Machine-canonical structural layer compiled from authored truth.",
+      "touch_when": "Touch this when structural IR fields, boundaries, or authority rules change."
+    }
+  ]
+}

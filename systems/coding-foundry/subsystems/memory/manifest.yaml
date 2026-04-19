@@ -8,9 +8,9 @@
     "cathedral/memory"
   ],
   "allowed_dependencies": [
+    "cathedral/memory",
     "coding-foundry/deterministic-truth",
     "coding-foundry/working-memory",
     "coding-foundry/parameter-lineage"
   ]
 }
-

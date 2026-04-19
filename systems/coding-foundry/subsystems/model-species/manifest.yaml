@@ -8,9 +8,9 @@
     "cathedral/models"
   ],
   "allowed_dependencies": [
+    "cathedral/models",
     "coding-foundry/packets",
     "coding-foundry/memory",
     "coding-foundry/promotion"
   ]
 }
-

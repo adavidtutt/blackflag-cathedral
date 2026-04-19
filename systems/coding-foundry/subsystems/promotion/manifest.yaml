@@ -8,9 +8,9 @@
     "cathedral/learning"
   ],
   "allowed_dependencies": [
+    "cathedral/learning",
     "coding-foundry/model-species",
     "coding-foundry/parameter-lineage",
     "coding-foundry/deterministic-truth"
   ]
 }
-

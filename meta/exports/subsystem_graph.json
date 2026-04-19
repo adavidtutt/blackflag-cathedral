@@ -316,6 +316,7 @@
     },
     "coding-foundry/deterministic-truth": {
       "allowed_dependencies": [
+        "cathedral/deterministic-truth",
         "coding-foundry/packets",
         "coding-foundry/working-memory"
       ],
@@ -328,6 +329,7 @@
     },
     "coding-foundry/memory": {
       "allowed_dependencies": [
+        "cathedral/memory",
         "coding-foundry/deterministic-truth",
         "coding-foundry/working-memory",
         "coding-foundry/parameter-lineage"
@@ -341,6 +343,7 @@
     },
     "coding-foundry/model-species": {
       "allowed_dependencies": [
+        "cathedral/models",
         "coding-foundry/packets",
         "coding-foundry/memory",
         "coding-foundry/promotion"
@@ -364,6 +367,7 @@
     },
     "coding-foundry/parameter-lineage": {
       "allowed_dependencies": [
+        "cathedral/graphs",
         "coding-foundry/memory",
         "coding-foundry/promotion"
       ],
@@ -376,6 +380,7 @@
     },
     "coding-foundry/promotion": {
       "allowed_dependencies": [
+        "cathedral/learning",
         "coding-foundry/model-species",
         "coding-foundry/parameter-lineage",
         "coding-foundry/deterministic-truth"
@@ -389,6 +394,7 @@
     },
     "coding-foundry/working-memory": {
       "allowed_dependencies": [
+        "coding-foundry/packets",
         "coding-foundry/deterministic-truth",
         "coding-foundry/model-species"
       ],

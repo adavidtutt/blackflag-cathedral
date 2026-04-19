@@ -8,8 +8,8 @@
     "coding-foundry/packets"
   ],
   "allowed_dependencies": [
+    "coding-foundry/packets",
     "coding-foundry/deterministic-truth",
     "coding-foundry/model-species"
   ]
 }
-

@@ -19,11 +19,14 @@ jobs:
           python-version: "3.11"
 
       - name: Validate subsystem graph
-        run: python3 scripts/validate_subsystems.py
+        run: python3 scripts/sync_subsystem_surfaces.py && python3 scripts/validate_subsystems.py
 
       - name: Export subsystem graph
         run: python3 scripts/export_subsystem_graph.py
 
-      - name: Check exported graph is committed
-        run: git diff --exit-code -- meta/exports/subsystem_graph.json meta/exports/subsystem_graph.mmd
-
+      - name: Check generated architecture surfaces are committed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git status --short
+            exit 1
+          fi

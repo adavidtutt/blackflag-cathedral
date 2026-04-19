@@ -8,8 +8,8 @@
     "cathedral/deterministic-truth"
   ],
   "allowed_dependencies": [
+    "cathedral/deterministic-truth",
     "coding-foundry/packets",
     "coding-foundry/working-memory"
   ]
 }
-
