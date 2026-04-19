@@ -1,0 +1,29 @@
+name: Validate Architecture
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate subsystem graph
+        run: python3 scripts/validate_subsystems.py
+
+      - name: Export subsystem graph
+        run: python3 scripts/export_subsystem_graph.py
+
+      - name: Check exported graph is committed
+        run: git diff --exit-code -- meta/exports/subsystem_graph.json meta/exports/subsystem_graph.mmd
+

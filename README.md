@@ -63,6 +63,8 @@ For machine-readable summaries:
 - [meta/tags/tag_index.yaml](./meta/tags/tag_index.yaml)
 - [meta/exports/wiki_manifest.yaml](./meta/exports/wiki_manifest.yaml)
 - [meta/exports/subsystem_manifest_index.yaml](./meta/exports/subsystem_manifest_index.yaml)
+- [meta/exports/subsystem_graph.json](./meta/exports/subsystem_graph.json)
+- [meta/exports/subsystem_graph.mmd](./meta/exports/subsystem_graph.mmd)
 - [systems/REGISTRY.yaml](./systems/REGISTRY.yaml)
 
 ## Modular Subsystems
@@ -85,6 +87,15 @@ Each top-level subsystem owns:
 
 Validate the subsystem graph with:
 - `python3 scripts/validate_subsystems.py`
+
+Export the subsystem graph with:
+- `python3 scripts/export_subsystem_graph.py`
+
+GitHub-native control surfaces now live in:
+- `.github/workflows/validate-architecture.yml`
+- `.github/ISSUE_TEMPLATE/`
+- `.github/PULL_REQUEST_TEMPLATE.md`
+- `CODEOWNERS`
 
 ## Update Rule
 

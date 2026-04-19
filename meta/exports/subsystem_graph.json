@@ -1,0 +1,612 @@
+{
+  "edges": [
+    {
+      "from": "cathedral",
+      "kind": "contains",
+      "to": "cathedral/deterministic-truth"
+    },
+    {
+      "from": "cathedral",
+      "kind": "contains",
+      "to": "cathedral/graphs"
+    },
+    {
+      "from": "cathedral",
+      "kind": "contains",
+      "to": "cathedral/learning"
+    },
+    {
+      "from": "cathedral",
+      "kind": "contains",
+      "to": "cathedral/memory"
+    },
+    {
+      "from": "cathedral",
+      "kind": "contains",
+      "to": "cathedral/models"
+    },
+    {
+      "from": "cathedral",
+      "kind": "contains",
+      "to": "cathedral/query-path"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "depends_on",
+      "to": "cathedral"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "depends_on",
+      "to": "harness"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "depends_on",
+      "to": "training"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "depends_on",
+      "to": "visual-implementation"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "contains",
+      "to": "coding-foundry/deterministic-truth"
+    },
+    {
+      "from": "coding-foundry/deterministic-truth",
+      "kind": "depends_on",
+      "to": "cathedral/deterministic-truth"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "contains",
+      "to": "coding-foundry/memory"
+    },
+    {
+      "from": "coding-foundry/memory",
+      "kind": "depends_on",
+      "to": "cathedral/memory"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "contains",
+      "to": "coding-foundry/model-species"
+    },
+    {
+      "from": "coding-foundry/model-species",
+      "kind": "depends_on",
+      "to": "cathedral/models"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "contains",
+      "to": "coding-foundry/packets"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "contains",
+      "to": "coding-foundry/parameter-lineage"
+    },
+    {
+      "from": "coding-foundry/parameter-lineage",
+      "kind": "depends_on",
+      "to": "cathedral/graphs"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "contains",
+      "to": "coding-foundry/promotion"
+    },
+    {
+      "from": "coding-foundry/promotion",
+      "kind": "depends_on",
+      "to": "cathedral/learning"
+    },
+    {
+      "from": "coding-foundry",
+      "kind": "contains",
+      "to": "coding-foundry/working-memory"
+    },
+    {
+      "from": "coding-foundry/working-memory",
+      "kind": "depends_on",
+      "to": "coding-foundry/packets"
+    },
+    {
+      "from": "harness",
+      "kind": "depends_on",
+      "to": "coding-foundry"
+    },
+    {
+      "from": "harness",
+      "kind": "contains",
+      "to": "harness/artifact-store"
+    },
+    {
+      "from": "harness",
+      "kind": "contains",
+      "to": "harness/broker"
+    },
+    {
+      "from": "harness",
+      "kind": "contains",
+      "to": "harness/gateway"
+    },
+    {
+      "from": "harness",
+      "kind": "contains",
+      "to": "harness/runtime-planes"
+    },
+    {
+      "from": "harness",
+      "kind": "contains",
+      "to": "harness/sandbox-runner"
+    },
+    {
+      "from": "harness",
+      "kind": "contains",
+      "to": "harness/scheduler"
+    },
+    {
+      "from": "harness",
+      "kind": "contains",
+      "to": "harness/telemetry"
+    },
+    {
+      "from": "training",
+      "kind": "depends_on",
+      "to": "coding-foundry"
+    },
+    {
+      "from": "training",
+      "kind": "contains",
+      "to": "training/datasets"
+    },
+    {
+      "from": "training",
+      "kind": "contains",
+      "to": "training/hardware"
+    },
+    {
+      "from": "training",
+      "kind": "contains",
+      "to": "training/roles"
+    },
+    {
+      "from": "training",
+      "kind": "contains",
+      "to": "training/runtime-planes"
+    },
+    {
+      "from": "visual-implementation",
+      "kind": "depends_on",
+      "to": "cathedral"
+    },
+    {
+      "from": "visual-implementation",
+      "kind": "depends_on",
+      "to": "coding-foundry"
+    },
+    {
+      "from": "visual-implementation",
+      "kind": "contains",
+      "to": "visual-implementation/authoring-surface"
+    },
+    {
+      "from": "visual-implementation",
+      "kind": "contains",
+      "to": "visual-implementation/bound-subdocumentation"
+    },
+    {
+      "from": "visual-implementation",
+      "kind": "contains",
+      "to": "visual-implementation/gui-views"
+    },
+    {
+      "from": "visual-implementation",
+      "kind": "contains",
+      "to": "visual-implementation/package-ownership"
+    },
+    {
+      "from": "visual-implementation",
+      "kind": "contains",
+      "to": "visual-implementation/projections"
+    },
+    {
+      "from": "visual-implementation",
+      "kind": "contains",
+      "to": "visual-implementation/structural-compiler"
+    },
+    {
+      "from": "visual-implementation",
+      "kind": "contains",
+      "to": "visual-implementation/structural-ir"
+    }
+  ],
+  "subsystems": {
+    "cathedral": {
+      "allowed_dependencies": [],
+      "depends_on": [],
+      "kind": "top-level-subsystem",
+      "parent": null,
+      "status": "frozen"
+    },
+    "cathedral/deterministic-truth": {
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/query-path"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "cathedral",
+      "status": "bounded"
+    },
+    "cathedral/graphs": {
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/models"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "cathedral",
+      "status": "frozen"
+    },
+    "cathedral/learning": {
+      "allowed_dependencies": [
+        "cathedral/memory",
+        "cathedral/models",
+        "cathedral/graphs"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "cathedral",
+      "status": "frozen"
+    },
+    "cathedral/memory": {
+      "allowed_dependencies": [
+        "cathedral/graphs",
+        "cathedral/deterministic-truth"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "cathedral",
+      "status": "frozen"
+    },
+    "cathedral/models": {
+      "allowed_dependencies": [
+        "cathedral/graphs",
+        "cathedral/query-path",
+        "cathedral/learning"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "cathedral",
+      "status": "frozen"
+    },
+    "cathedral/query-path": {
+      "allowed_dependencies": [
+        "cathedral/models",
+        "cathedral/graphs",
+        "cathedral/deterministic-truth"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "cathedral",
+      "status": "frozen"
+    },
+    "coding-foundry": {
+      "allowed_dependencies": [
+        "cathedral",
+        "harness",
+        "training",
+        "visual-implementation"
+      ],
+      "depends_on": [
+        "cathedral",
+        "harness",
+        "training",
+        "visual-implementation"
+      ],
+      "kind": "top-level-subsystem",
+      "parent": null,
+      "status": "frozen"
+    },
+    "coding-foundry/deterministic-truth": {
+      "allowed_dependencies": [
+        "coding-foundry/packets",
+        "coding-foundry/working-memory"
+      ],
+      "depends_on": [
+        "cathedral/deterministic-truth"
+      ],
+      "kind": "child-subsystem",
+      "parent": "coding-foundry",
+      "status": "bounded"
+    },
+    "coding-foundry/memory": {
+      "allowed_dependencies": [
+        "coding-foundry/deterministic-truth",
+        "coding-foundry/working-memory",
+        "coding-foundry/parameter-lineage"
+      ],
+      "depends_on": [
+        "cathedral/memory"
+      ],
+      "kind": "child-subsystem",
+      "parent": "coding-foundry",
+      "status": "frozen"
+    },
+    "coding-foundry/model-species": {
+      "allowed_dependencies": [
+        "coding-foundry/packets",
+        "coding-foundry/memory",
+        "coding-foundry/promotion"
+      ],
+      "depends_on": [
+        "cathedral/models"
+      ],
+      "kind": "child-subsystem",
+      "parent": "coding-foundry",
+      "status": "frozen"
+    },
+    "coding-foundry/packets": {
+      "allowed_dependencies": [
+        "coding-foundry/deterministic-truth",
+        "coding-foundry/working-memory"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "coding-foundry",
+      "status": "frozen"
+    },
+    "coding-foundry/parameter-lineage": {
+      "allowed_dependencies": [
+        "coding-foundry/memory",
+        "coding-foundry/promotion"
+      ],
+      "depends_on": [
+        "cathedral/graphs"
+      ],
+      "kind": "child-subsystem",
+      "parent": "coding-foundry",
+      "status": "frozen"
+    },
+    "coding-foundry/promotion": {
+      "allowed_dependencies": [
+        "coding-foundry/model-species",
+        "coding-foundry/parameter-lineage",
+        "coding-foundry/deterministic-truth"
+      ],
+      "depends_on": [
+        "cathedral/learning"
+      ],
+      "kind": "child-subsystem",
+      "parent": "coding-foundry",
+      "status": "bounded"
+    },
+    "coding-foundry/working-memory": {
+      "allowed_dependencies": [
+        "coding-foundry/deterministic-truth",
+        "coding-foundry/model-species"
+      ],
+      "depends_on": [
+        "coding-foundry/packets"
+      ],
+      "kind": "child-subsystem",
+      "parent": "coding-foundry",
+      "status": "bounded"
+    },
+    "harness": {
+      "allowed_dependencies": [
+        "coding-foundry"
+      ],
+      "depends_on": [
+        "coding-foundry"
+      ],
+      "kind": "top-level-subsystem",
+      "parent": null,
+      "status": "frozen"
+    },
+    "harness/artifact-store": {
+      "allowed_dependencies": [],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "harness",
+      "status": "frozen"
+    },
+    "harness/broker": {
+      "allowed_dependencies": [
+        "harness/sandbox-runner",
+        "harness/artifact-store"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "harness",
+      "status": "frozen"
+    },
+    "harness/gateway": {
+      "allowed_dependencies": [
+        "harness/scheduler"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "harness",
+      "status": "frozen"
+    },
+    "harness/runtime-planes": {
+      "allowed_dependencies": [
+        "harness/scheduler",
+        "training/runtime-planes"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "harness",
+      "status": "bounded"
+    },
+    "harness/sandbox-runner": {
+      "allowed_dependencies": [
+        "harness/artifact-store",
+        "harness/telemetry"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "harness",
+      "status": "frozen"
+    },
+    "harness/scheduler": {
+      "allowed_dependencies": [
+        "harness/broker",
+        "harness/runtime-planes"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "harness",
+      "status": "frozen"
+    },
+    "harness/telemetry": {
+      "allowed_dependencies": [],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "harness",
+      "status": "frozen"
+    },
+    "training": {
+      "allowed_dependencies": [
+        "coding-foundry"
+      ],
+      "depends_on": [
+        "coding-foundry"
+      ],
+      "kind": "top-level-subsystem",
+      "parent": null,
+      "status": "frozen"
+    },
+    "training/datasets": {
+      "allowed_dependencies": [
+        "training/roles"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "training",
+      "status": "bounded"
+    },
+    "training/hardware": {
+      "allowed_dependencies": [
+        "training/roles",
+        "training/runtime-planes"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "training",
+      "status": "frozen"
+    },
+    "training/roles": {
+      "allowed_dependencies": [
+        "training/datasets",
+        "training/hardware"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "training",
+      "status": "frozen"
+    },
+    "training/runtime-planes": {
+      "allowed_dependencies": [
+        "training/hardware"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "training",
+      "status": "bounded"
+    },
+    "visual-implementation": {
+      "allowed_dependencies": [
+        "cathedral",
+        "coding-foundry"
+      ],
+      "depends_on": [
+        "cathedral",
+        "coding-foundry"
+      ],
+      "kind": "top-level-subsystem",
+      "parent": null,
+      "status": "frozen"
+    },
+    "visual-implementation/authoring-surface": {
+      "allowed_dependencies": [
+        "visual-implementation/bound-subdocumentation",
+        "visual-implementation/structural-ir"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "visual-implementation",
+      "status": "frozen"
+    },
+    "visual-implementation/bound-subdocumentation": {
+      "allowed_dependencies": [
+        "visual-implementation/authoring-surface",
+        "visual-implementation/structural-ir"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "visual-implementation",
+      "status": "bounded"
+    },
+    "visual-implementation/gui-views": {
+      "allowed_dependencies": [
+        "visual-implementation/projections",
+        "visual-implementation/structural-ir"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "visual-implementation",
+      "status": "bounded"
+    },
+    "visual-implementation/package-ownership": {
+      "allowed_dependencies": [
+        "visual-implementation/projections"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "visual-implementation",
+      "status": "bounded"
+    },
+    "visual-implementation/projections": {
+      "allowed_dependencies": [
+        "visual-implementation/structural-ir",
+        "visual-implementation/package-ownership",
+        "visual-implementation/gui-views"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "visual-implementation",
+      "status": "bounded"
+    },
+    "visual-implementation/structural-compiler": {
+      "allowed_dependencies": [
+        "visual-implementation/structural-ir",
+        "visual-implementation/projections",
+        "visual-implementation/package-ownership",
+        "visual-implementation/gui-views"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "visual-implementation",
+      "status": "bounded"
+    },
+    "visual-implementation/structural-ir": {
+      "allowed_dependencies": [
+        "visual-implementation/bound-subdocumentation",
+        "visual-implementation/structural-compiler",
+        "visual-implementation/projections"
+      ],
+      "depends_on": [],
+      "kind": "child-subsystem",
+      "parent": "visual-implementation",
+      "status": "frozen"
+    }
+  }
+}
