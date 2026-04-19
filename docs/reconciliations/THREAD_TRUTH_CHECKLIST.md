@@ -31,7 +31,7 @@ This file is the explicit self-check against the thread’s user-provided truth.
 
 ## Structural Compiler Checks
 
-- [x] The visual artifact is not treated as semantic truth.
+- [x] The visual system plus its bound subdocumentation is allowed to change truth.
 - [x] A canonical IR remains between visual authoring and downstream code.
 - [x] Python and Rust are treated as sibling targets of the same IR.
 - [x] The structural compiler track is not collapsed into the Coding Foundry.

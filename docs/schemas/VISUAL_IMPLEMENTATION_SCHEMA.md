@@ -33,13 +33,19 @@ The system must be buildable visually at depth.
 
 The visual artifact is required because the architecture is too structurally dense to be managed as prose or raw code alone.
 
-The visual artifact is **not** the final semantic truth.
+The visual system is allowed to be a truth-bearing authoring surface.
+
+More precisely:
+- raw layout alone is not sufficient semantic authority
+- the visual layer plus its bound subdocumentation can absolutely originate and change truth
+- the compiler and IR must preserve that authorship rather than overriding it with an anti-visual bias
 
 The correct shape is:
 
 1. visual schematic or harness authoring
-2. canonical IR
-3. compiled projections
+2. authoritative subdocumentation bound to authored structures
+3. canonical IR compiled from that authoring truth
+4. compiled projections
 
 This is not a compromise. It is the correct architecture for the problem.
 
@@ -75,16 +81,30 @@ Purpose:
 - visible boundaries
 - subsystem navigation
 
-The visual layer is for human cognition, not final machine authority.
+The visual layer is an authority-bearing authoring surface when paired with its bound subdocumentation and stable structural identities.
+
+It must be able to change truth.
+
+That means a user must be able to change the machine’s canonical structure through the visual system rather than being forced to edit downstream compiled artifacts as the real source of truth.
+
+### Bound Subdocumentation Layer
+
+Purpose:
+- attach explicit meaning to visual structures
+- hold local authority for node intent, edge meaning, boundary semantics, and subsystem notes
+- provide the mechanism by which the user can deliberately change truth through the visual system
+
+This layer is part of the authoring truth, not commentary.
 
 ### IR Layer
 
 Purpose:
 - canonical machine-readable truth
-- structure without drawing trivia
+- compiled structural truth produced from the visual authoring system
 - identity, boundaries, interfaces, topology, and projection intent
+- stable machine-readable form for regeneration and downstream targets
 
-This is the authoritative layer.
+The IR is canonical for machines, but it is not permitted to become a rival human authority that overrides the upstream authoring truth.
 
 ### Projection Layer
 
@@ -118,9 +138,11 @@ The compiler should consume:
 
 It should not consume pixels or aesthetic trivia as semantic authority.
 
+This is not a rejection of visual truth. It is a rejection of untyped layout trivia as truth.
+
 ## Structural Frontend Rule
 
-The schematic is a frontend, not the truth layer.
+The schematic is a frontend to the truth-authoring system, not a disposable sketch layer.
 
 It should visually author:
 - nodes
@@ -135,7 +157,7 @@ It should visually author:
 - trust boundaries
 - subsystem boundaries
 
-The compiler should then extract:
+The compiler should then extract, from the visual layer plus its bound subdocumentation:
 - typed nodes
 - typed edges
 - hierarchy
@@ -168,7 +190,7 @@ They are siblings, not parents of each other.
 
 The schematic should not compile directly into language-specific code structures as its first semantic target.
 
-It should first compile into a portable execution model containing:
+The visual authoring system should first compile into a portable execution model containing:
 - subsystems
 - nodes
 - ports
@@ -203,7 +225,7 @@ This avoids future regeneration fights.
 
 ## Regeneration Rule
 
-Every projection should be regenerable from the same IR.
+Every projection should be regenerable from the same authored truth as compiled through the IR.
 
 That includes:
 - docs
@@ -214,6 +236,8 @@ That includes:
 - wiki pages
 
 If a projection cannot be regenerated cleanly, it should not silently become the real source of truth.
+
+Likewise, if the IR cannot be regenerated from the visual authoring system and its bound subdocumentation, the IR is drifting away from the user’s authority and must be treated as broken.
 
 ## GUI Rule
 
@@ -271,7 +295,6 @@ These passes remain bounded architectural intent, not an implementation mandate.
 
 - This does not replace the Structural IR boundary rules.
 - This does not collapse the Coding Foundry into a generic code generator.
-- This does not make the visual schematic itself authoritative.
+- This does not say that raw pixel layout by itself is authoritative.
 - This does not make Python the parent of Rust.
 - This does not force arbitrary in-place editing of handwritten code.
-

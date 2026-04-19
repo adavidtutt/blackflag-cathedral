@@ -24,7 +24,9 @@ This track is adjacent to, but distinct from, the Coding Foundry.
 
 ## Purpose
 
-The structural compiler track exists because the system must be authored visually at depth, but the visual artifact is not the final semantic truth.
+The structural compiler track exists because the system must be authored visually at depth and because that visual authoring system must be able to change truth.
+
+Raw layout alone is not sufficient semantic authority, but the visual system plus its bound subdocumentation is an authority-bearing source layer.
 
 Correct shape:
 - visual schematic or harness authoring
@@ -73,8 +75,8 @@ Canonical source: `outside-chat reconciliation -> ChatGPT 5.4`
 
 ## Projection Philosophy
 
-The visual artifact is for human legibility.
-The IR is for compiler legibility.
+The visual authoring system is for human authority and legibility.
+The IR is for compiler legibility and machine-stable regeneration.
 Generated code, docs, GUIs, and control surfaces are projections.
 
 ## Intended Projections
@@ -92,4 +94,3 @@ Generated code, docs, GUIs, and control surfaces are projections.
 - This does not replace the visual-first authoring approach.
 - This does not make Python the semantic source of truth.
 - This does not collapse the Structural Compiler track into the Coding Foundry.
-

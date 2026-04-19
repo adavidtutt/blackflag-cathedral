@@ -107,7 +107,7 @@ visual_to_implementation:
   canonical_file: docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md
   principles:
     - visual_authoring_required
-    - visual_is_not_semantic_truth
+    - visual_plus_subdocumentation_can_change_truth
     - visual_to_ir_to_projection
     - layout_is_not_logic
     - python_and_rust_are_sibling_targets

@@ -264,11 +264,12 @@ Relationship to main system:
 
 Status: `frozen`
 
-The visual artifact is not the final semantic truth.
+The visual system is allowed to be a truth-bearing authoring surface.
 
 The correct shape is:
 - visual schematic or harness authoring
-- intermediate representation as source of truth
+- bound subdocumentation attached to authored structures
+- intermediate representation compiled from that authoring truth
 - compiled projections downstream
 
 Python and Rust are downstream targets of the same canonical IR, not parents of each other.
@@ -282,9 +283,10 @@ The visual-to-implementation tangent is now treated as a first-class architectur
 Core rules:
 - the system must be buildable visually at depth
 - the visual artifact is required for human topology thinking
-- the visual artifact is not the final semantic truth
+- the visual system plus its bound subdocumentation can change truth
 - the correct path is:
   - visual schematic or harness authoring
+  - bound subdocumentation
   - canonical IR
   - compiled projections
 

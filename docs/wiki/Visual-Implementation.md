@@ -12,11 +12,12 @@ tags:
 
 # Visual Implementation
 
-The system must be buildable visually at depth, but the visual artifact is not the final semantic truth.
+The system must be buildable visually at depth, and the visual system is allowed to change truth.
 
 The canonical path is:
 - visual schematic or harness authoring
-- canonical IR
+- bound subdocumentation
+- canonical IR compiled from that authoring truth
 - compiled projections
 
 Python and Rust are sibling targets of that IR. The visual-to-implementation system also treats GUIs and operator views as compiled projections of the same canonical structure.
@@ -24,4 +25,3 @@ Python and Rust are sibling targets of that IR. The visual-to-implementation sys
 For canonical detail, see:
 - [../schemas/VISUAL_IMPLEMENTATION_SCHEMA.md](../schemas/VISUAL_IMPLEMENTATION_SCHEMA.md)
 - [../schemas/STRUCTURAL_COMPILER_SCHEMA.md](../schemas/STRUCTURAL_COMPILER_SCHEMA.md)
-
