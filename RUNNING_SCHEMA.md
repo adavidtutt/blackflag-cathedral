@@ -273,6 +273,34 @@ The correct shape is:
 
 Python and Rust are downstream targets of the same canonical IR, not parents of each other.
 
+## Visual To Implementation System
+
+Status: `frozen`
+
+The visual-to-implementation tangent is now treated as a first-class architectural subsystem.
+
+Core rules:
+- the system must be buildable visually at depth
+- the visual artifact is required for human topology thinking
+- the visual artifact is not the final semantic truth
+- the correct path is:
+  - visual schematic or harness authoring
+  - canonical IR
+  - compiled projections
+
+Further rules:
+- layout is not logic
+- the compiler should consume symbols, IDs, ports, boundaries, and typed relations rather than pixels
+- Python and Rust are sibling targets of the same IR
+- generated structure should prefer owned zones over mutating arbitrary handwritten code
+- GUI/control surfaces are compiled views of the same canonical model
+- the system should preserve at least:
+  - topology graph
+  - semantic or relation graph
+
+Canonical detail lives in:
+- `docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md`
+
 ## Structural IR Boundary
 
 Status: `frozen`

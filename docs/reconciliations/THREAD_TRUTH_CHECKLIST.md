@@ -35,6 +35,7 @@ This file is the explicit self-check against the thread’s user-provided truth.
 - [x] A canonical IR remains between visual authoring and downstream code.
 - [x] Python and Rust are treated as sibling targets of the same IR.
 - [x] The structural compiler track is not collapsed into the Coding Foundry.
+- [x] The visual-to-implementation system is represented as its own subsystem rather than a side note.
 
 ## Training Checks
 
@@ -68,4 +69,3 @@ This file is the explicit self-check against the thread’s user-provided truth.
 - [ ] Promotion/consolidation hook schema not fully frozen
 - [ ] Visual-harness-to-IR mapping not fully frozen
 - [ ] Structural-IR-to-packet-boundary mapping not fully frozen
-

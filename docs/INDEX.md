@@ -26,6 +26,7 @@ tags:
 - [schemas/TRAINING_SCHEMA.md](./schemas/TRAINING_SCHEMA.md)
 - [schemas/HARNESS_SCHEMA.md](./schemas/HARNESS_SCHEMA.md)
 - [schemas/STRUCTURAL_COMPILER_SCHEMA.md](./schemas/STRUCTURAL_COMPILER_SCHEMA.md)
+- [schemas/VISUAL_IMPLEMENTATION_SCHEMA.md](./schemas/VISUAL_IMPLEMENTATION_SCHEMA.md)
 
 ## Verification And Reconciliation
 
@@ -39,6 +40,6 @@ tags:
 - [wiki/Architecture.md](./wiki/Architecture.md)
 - [wiki/Training.md](./wiki/Training.md)
 - [wiki/Harness.md](./wiki/Harness.md)
+- [wiki/Visual-Implementation.md](./wiki/Visual-Implementation.md)
 - [wiki/Foundry.md](./wiki/Foundry.md)
 - [wiki/Reconciliations.md](./wiki/Reconciliations.md)
-

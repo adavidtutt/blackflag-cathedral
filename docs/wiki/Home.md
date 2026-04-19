@@ -16,6 +16,7 @@ This wiki is the human-readable surface of the Cathedral schema corpus.
 ## Start Here
 
 - [Architecture](./Architecture.md)
+- [Visual Implementation](./Visual-Implementation.md)
 - [Foundry](./Foundry.md)
 - [Training](./Training.md)
 - [Harness](./Harness.md)
@@ -25,4 +26,3 @@ This wiki is the human-readable surface of the Cathedral schema corpus.
 
 - [../../RUNNING_SCHEMA.md](../../RUNNING_SCHEMA.md)
 - [../INDEX.md](../INDEX.md)
-

@@ -35,6 +35,7 @@ It is designed to do four jobs at once:
 - [docs/schemas/TRAINING_SCHEMA.md](./docs/schemas/TRAINING_SCHEMA.md)
 - [docs/schemas/HARNESS_SCHEMA.md](./docs/schemas/HARNESS_SCHEMA.md)
 - [docs/schemas/STRUCTURAL_COMPILER_SCHEMA.md](./docs/schemas/STRUCTURAL_COMPILER_SCHEMA.md)
+- [docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md](./docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md)
 - [docs/reconciliations/OUTSIDE_CHAT_RECONCILIATIONS.md](./docs/reconciliations/OUTSIDE_CHAT_RECONCILIATIONS.md)
 - [docs/reconciliations/THREAD_TRUTH_CHECKLIST.md](./docs/reconciliations/THREAD_TRUTH_CHECKLIST.md)
 
@@ -80,4 +81,3 @@ The Coding Foundry is a bounded, Cathedral-compatible coding lane that:
 - helps build the larger system
 - later lives inside the larger system
 - preserves structural compatibility with Cathedral principles
-

@@ -102,6 +102,19 @@ structural_ir:
     - environment_specific_deployment_facts
     - behavior_disguised_as_structure
 
+visual_to_implementation:
+  status: frozen
+  canonical_file: docs/schemas/VISUAL_IMPLEMENTATION_SCHEMA.md
+  principles:
+    - visual_authoring_required
+    - visual_is_not_semantic_truth
+    - visual_to_ir_to_projection
+    - layout_is_not_logic
+    - python_and_rust_are_sibling_targets
+    - prefer_owned_generated_zones
+    - gui_is_a_projection
+    - preserve_topology_and_relation_graphs
+
 packets:
   status: frozen
   canonical_source: chatgpt_5_4_reconciled

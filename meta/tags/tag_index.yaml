@@ -19,4 +19,5 @@ tags:
     description: Human-readable wiki surface files
   verification:
     description: Truth-check and non-drift validation files
-
+  visual-to-implementation:
+    description: Visual harness authoring to IR to projections system

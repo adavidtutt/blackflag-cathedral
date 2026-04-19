@@ -20,4 +20,4 @@ The Coding Foundry is one bounded coding lane inside that future system.
 For canonical detail, see:
 - [../schemas/CATHEDRAL_SCHEMA.md](../schemas/CATHEDRAL_SCHEMA.md)
 - [../schemas/STRUCTURAL_COMPILER_SCHEMA.md](../schemas/STRUCTURAL_COMPILER_SCHEMA.md)
-
+- [../schemas/VISUAL_IMPLEMENTATION_SCHEMA.md](../schemas/VISUAL_IMPLEMENTATION_SCHEMA.md)

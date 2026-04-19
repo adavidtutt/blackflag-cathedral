@@ -4,6 +4,7 @@ wiki:
     - Home.md
     - _Sidebar.md
     - Architecture.md
+    - Visual-Implementation.md
     - Foundry.md
     - Training.md
     - Harness.md
@@ -11,4 +12,3 @@ wiki:
   canonical_backlinks:
     - RUNNING_SCHEMA.md
     - docs/INDEX.md
-
